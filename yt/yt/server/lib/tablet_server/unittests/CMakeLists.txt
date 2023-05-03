@@ -33,7 +33,7 @@ target_link_options(unittester-server-lib-tablet_server PRIVATE
   -lutil
 )
 target_sources(unittester-server-lib-tablet_server PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/tablet_server/unittests/replicated_table_tracker_ut.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/tablet_server/unittests/replicated_table_tracker_ut.cpp
 )
 add_test(
   NAME

@@ -32,24 +32,24 @@ target_link_libraries(library-tracing-jaeger PUBLIC
   contrib-libs-protobuf
 )
 target_proto_messages(library-tracing-jaeger PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/tracing/jaeger/model.proto
+  ${YT_SOURCE_DIR}/yt/yt/library/tracing/jaeger/model.proto
 )
 target_sources(library-tracing-jaeger PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/tracing/jaeger/sampler.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/tracing/jaeger/sampler.cpp
 )
 target_proto_addincls(library-tracing-jaeger
   ./
-  ${CMAKE_SOURCE_DIR}/
-  ${CMAKE_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_SOURCE_DIR}/contrib/libs/protobuf/src
-  ${CMAKE_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}/contrib/libs/protobuf/src
+  ${YT_SOURCE_DIR}/
+  ${YT_BINARY_DIR}
+  ${YT_SOURCE_DIR}
+  ${YT_SOURCE_DIR}/yt
+  ${YT_SOURCE_DIR}/contrib/libs/protobuf/src
+  ${YT_BINARY_DIR}
+  ${YT_SOURCE_DIR}/contrib/libs/protobuf/src
 )
 target_proto_outs(library-tracing-jaeger
-  --cpp_out=${CMAKE_BINARY_DIR}/
-  --cpp_styleguide_out=${CMAKE_BINARY_DIR}/
+  --cpp_out=${YT_BINARY_DIR}/
+  --cpp_styleguide_out=${YT_BINARY_DIR}/
 )
 
 add_global_library_for(library-tracing-jaeger.global library-tracing-jaeger)
@@ -65,5 +65,5 @@ target_link_libraries(library-tracing-jaeger.global PUBLIC
   contrib-libs-protobuf
 )
 target_sources(library-tracing-jaeger.global PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/tracing/jaeger/tracer.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/tracing/jaeger/tracer.cpp
 )

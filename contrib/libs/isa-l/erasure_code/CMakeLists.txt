@@ -12,483 +12,483 @@ target_compile_options(isa-l_ec PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(isa-l_ec PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_link_libraries(isa-l_ec PUBLIC
   contrib-libs-linux-headers
   contrib-libs-cxxsupp
 )
 target_sources(isa-l_ec PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/ec_base.c
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/ec_highlevel_func.c
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/ec_base.c
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/ec_highlevel_func.c
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/ec_multibinary.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/ec_multibinary.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_vect_mul_sse.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_vect_mul_sse.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_vect_mul_avx.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_vect_mul_avx.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_vect_dot_prod_sse.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_vect_dot_prod_sse.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_vect_dot_prod_avx.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_vect_dot_prod_avx.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_vect_dot_prod_avx2.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_vect_dot_prod_avx2.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_vect_dot_prod_avx512.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_vect_dot_prod_avx512.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_2vect_dot_prod_sse.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_2vect_dot_prod_sse.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_2vect_dot_prod_avx.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_2vect_dot_prod_avx.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_2vect_dot_prod_avx2.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_2vect_dot_prod_avx2.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_2vect_dot_prod_avx512.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_2vect_dot_prod_avx512.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_3vect_dot_prod_sse.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_3vect_dot_prod_sse.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_3vect_dot_prod_avx.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_3vect_dot_prod_avx.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_3vect_dot_prod_avx2.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_3vect_dot_prod_avx2.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_3vect_dot_prod_avx512.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_3vect_dot_prod_avx512.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_4vect_dot_prod_sse.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_4vect_dot_prod_sse.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_4vect_dot_prod_avx.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_4vect_dot_prod_avx.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_4vect_dot_prod_avx2.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_4vect_dot_prod_avx2.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_4vect_dot_prod_avx512.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_4vect_dot_prod_avx512.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_5vect_dot_prod_sse.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_5vect_dot_prod_sse.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_5vect_dot_prod_avx.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_5vect_dot_prod_avx.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_5vect_dot_prod_avx2.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_5vect_dot_prod_avx2.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_6vect_dot_prod_sse.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_6vect_dot_prod_sse.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_6vect_dot_prod_avx.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_6vect_dot_prod_avx.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_6vect_dot_prod_avx2.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_6vect_dot_prod_avx2.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_vect_mad_sse.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_vect_mad_sse.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_vect_mad_avx.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_vect_mad_avx.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_vect_mad_avx2.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_vect_mad_avx2.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_vect_mad_avx512.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_vect_mad_avx512.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_2vect_mad_sse.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_2vect_mad_sse.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_2vect_mad_avx.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_2vect_mad_avx.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_2vect_mad_avx2.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_2vect_mad_avx2.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_2vect_mad_avx512.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_2vect_mad_avx512.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_3vect_mad_sse.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_3vect_mad_sse.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_3vect_mad_avx.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_3vect_mad_avx.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_3vect_mad_avx2.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_3vect_mad_avx2.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_3vect_mad_avx512.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_3vect_mad_avx512.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_4vect_mad_sse.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_4vect_mad_sse.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_4vect_mad_avx.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_4vect_mad_avx.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_4vect_mad_avx2.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_4vect_mad_avx2.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_4vect_mad_avx512.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_4vect_mad_avx512.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_5vect_mad_sse.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_5vect_mad_sse.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_5vect_mad_avx.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_5vect_mad_avx.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_5vect_mad_avx2.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_5vect_mad_avx2.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_6vect_mad_sse.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_6vect_mad_sse.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_6vect_mad_avx.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_6vect_mad_avx.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )
 target_yasm_source(isa-l_ec
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_6vect_mad_avx2.asm
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/erasure_code/gf_6vect_mad_avx2.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/contrib/libs/isa-l/include
+  ${YT_SOURCE_DIR}/contrib/libs/isa-l/include
 )

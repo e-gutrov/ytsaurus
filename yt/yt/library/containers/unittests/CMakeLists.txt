@@ -34,9 +34,9 @@ target_link_options(unittester-containers PRIVATE
   -lutil
 )
 target_sources(unittester-containers PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/containers/unittests/containers_ut.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/containers/unittests/process_ut.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/containers/unittests/porto_resource_tracker_ut.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/containers/unittests/containers_ut.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/containers/unittests/process_ut.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/containers/unittests/porto_resource_tracker_ut.cpp
 )
 add_test(
   NAME

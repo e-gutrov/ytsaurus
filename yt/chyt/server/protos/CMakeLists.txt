@@ -36,7 +36,7 @@ target_compile_options(chyt-server-protos PRIVATE
   -Wdeprecated-this-capture
 )
 target_include_directories(chyt-server-protos PUBLIC
-  ${CMAKE_BINARY_DIR}/yt
+  ${YT_BINARY_DIR}/yt
 )
 target_link_libraries(chyt-server-protos PUBLIC
   contrib-libs-linux-headers
@@ -47,21 +47,21 @@ target_link_libraries(chyt-server-protos PUBLIC
   contrib-libs-protobuf
 )
 target_proto_messages(chyt-server-protos PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/protos/clickhouse_service.proto
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/protos/subquery_spec.proto
+  ${YT_SOURCE_DIR}/yt/chyt/server/protos/clickhouse_service.proto
+  ${YT_SOURCE_DIR}/yt/chyt/server/protos/subquery_spec.proto
 )
 target_proto_addincls(chyt-server-protos
   ./yt
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_SOURCE_DIR}/contrib/libs/protobuf/src
-  ${CMAKE_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}/contrib/libs/protobuf/src
+  ${YT_SOURCE_DIR}/yt
+  ${YT_BINARY_DIR}
+  ${YT_SOURCE_DIR}
+  ${YT_SOURCE_DIR}/yt
+  ${YT_SOURCE_DIR}/yt
+  ${YT_SOURCE_DIR}/contrib/libs/protobuf/src
+  ${YT_BINARY_DIR}
+  ${YT_SOURCE_DIR}/contrib/libs/protobuf/src
 )
 target_proto_outs(chyt-server-protos
-  --cpp_out=${CMAKE_BINARY_DIR}/yt
-  --cpp_styleguide_out=${CMAKE_BINARY_DIR}/yt
+  --cpp_out=${YT_BINARY_DIR}/yt
+  --cpp_styleguide_out=${YT_BINARY_DIR}/yt
 )

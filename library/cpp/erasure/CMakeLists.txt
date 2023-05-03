@@ -24,17 +24,17 @@ target_link_libraries(library-cpp-erasure PUBLIC
   tools-enum_parser-enum_serialization_runtime
 )
 target_sources(library-cpp-erasure PRIVATE
-  ${CMAKE_SOURCE_DIR}/library/cpp/erasure/public.cpp
-  ${CMAKE_SOURCE_DIR}/library/cpp/erasure/codec.cpp
-  ${CMAKE_SOURCE_DIR}/library/cpp/erasure/helpers.cpp
-  ${CMAKE_SOURCE_DIR}/library/cpp/erasure/isa_erasure.cpp
-  ${CMAKE_SOURCE_DIR}/library/cpp/erasure/reed_solomon.cpp
-  ${CMAKE_SOURCE_DIR}/library/cpp/erasure/reed_solomon_isa.cpp
-  ${CMAKE_SOURCE_DIR}/library/cpp/erasure/lrc.cpp
-  ${CMAKE_SOURCE_DIR}/library/cpp/erasure/lrc_isa.cpp
+  ${YT_SOURCE_DIR}/library/cpp/erasure/public.cpp
+  ${YT_SOURCE_DIR}/library/cpp/erasure/codec.cpp
+  ${YT_SOURCE_DIR}/library/cpp/erasure/helpers.cpp
+  ${YT_SOURCE_DIR}/library/cpp/erasure/isa_erasure.cpp
+  ${YT_SOURCE_DIR}/library/cpp/erasure/reed_solomon.cpp
+  ${YT_SOURCE_DIR}/library/cpp/erasure/reed_solomon_isa.cpp
+  ${YT_SOURCE_DIR}/library/cpp/erasure/lrc.cpp
+  ${YT_SOURCE_DIR}/library/cpp/erasure/lrc_isa.cpp
 )
 generate_enum_serilization(library-cpp-erasure
-  ${CMAKE_SOURCE_DIR}/library/cpp/erasure/public.h
+  ${YT_SOURCE_DIR}/library/cpp/erasure/public.h
   INCLUDE_HEADERS
   library/cpp/erasure/public.h
 )

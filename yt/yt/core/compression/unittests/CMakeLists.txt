@@ -33,8 +33,8 @@ target_link_options(unittester-core-compression PRIVATE
   -lutil
 )
 target_sources(unittester-core-compression PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/compression/unittests/codec_ut.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/compression/unittests/stream_ut.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/compression/unittests/codec_ut.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/compression/unittests/stream_ut.cpp
 )
 add_test(
   NAME

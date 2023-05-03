@@ -22,18 +22,18 @@ target_link_libraries(library-cpp-type_info PUBLIC
   yson_pull
 )
 target_sources(library-cpp-type_info PRIVATE
-  ${CMAKE_SOURCE_DIR}/library/cpp/type_info/type_info.cpp
-  ${CMAKE_SOURCE_DIR}/library/cpp/type_info/builder.cpp
-  ${CMAKE_SOURCE_DIR}/library/cpp/type_info/error.cpp
-  ${CMAKE_SOURCE_DIR}/library/cpp/type_info/type.cpp
-  ${CMAKE_SOURCE_DIR}/library/cpp/type_info/type_complexity.cpp
-  ${CMAKE_SOURCE_DIR}/library/cpp/type_info/type_equivalence.cpp
-  ${CMAKE_SOURCE_DIR}/library/cpp/type_info/type_factory.cpp
-  ${CMAKE_SOURCE_DIR}/library/cpp/type_info/type_io.cpp
-  ${CMAKE_SOURCE_DIR}/library/cpp/type_info/type_list.cpp
+  ${YT_SOURCE_DIR}/library/cpp/type_info/type_info.cpp
+  ${YT_SOURCE_DIR}/library/cpp/type_info/builder.cpp
+  ${YT_SOURCE_DIR}/library/cpp/type_info/error.cpp
+  ${YT_SOURCE_DIR}/library/cpp/type_info/type.cpp
+  ${YT_SOURCE_DIR}/library/cpp/type_info/type_complexity.cpp
+  ${YT_SOURCE_DIR}/library/cpp/type_info/type_equivalence.cpp
+  ${YT_SOURCE_DIR}/library/cpp/type_info/type_factory.cpp
+  ${YT_SOURCE_DIR}/library/cpp/type_info/type_io.cpp
+  ${YT_SOURCE_DIR}/library/cpp/type_info/type_list.cpp
 )
 generate_enum_serilization(library-cpp-type_info
-  ${CMAKE_SOURCE_DIR}/library/cpp/type_info/type_list.h
+  ${YT_SOURCE_DIR}/library/cpp/type_info/type_list.h
   INCLUDE_HEADERS
   library/cpp/type_info/type_list.h
 )

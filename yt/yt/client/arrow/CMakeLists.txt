@@ -43,43 +43,43 @@ target_link_libraries(yt-client-arrow PUBLIC
   contrib-libs-flatbuffers
 )
 target_sources(yt-client-arrow PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/client/arrow/arrow_row_stream_encoder.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/client/arrow/arrow_row_stream_decoder.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/client/arrow/public.cpp
-  ${CMAKE_BINARY_DIR}/yt/yt/client/arrow/fbs/Message.fbs.cpp
-  ${CMAKE_BINARY_DIR}/yt/yt/client/arrow/fbs/Schema.fbs.cpp
-  ${CMAKE_BINARY_DIR}/yt/yt/client/arrow/fbs/Tensor.fbs.cpp
-  ${CMAKE_BINARY_DIR}/yt/yt/client/arrow/fbs/SparseTensor.fbs.cpp
+  ${YT_SOURCE_DIR}/yt/yt/client/arrow/arrow_row_stream_encoder.cpp
+  ${YT_SOURCE_DIR}/yt/yt/client/arrow/arrow_row_stream_decoder.cpp
+  ${YT_SOURCE_DIR}/yt/yt/client/arrow/public.cpp
+  ${YT_BINARY_DIR}/yt/yt/client/arrow/fbs/Message.fbs.cpp
+  ${YT_BINARY_DIR}/yt/yt/client/arrow/fbs/Schema.fbs.cpp
+  ${YT_BINARY_DIR}/yt/yt/client/arrow/fbs/Tensor.fbs.cpp
+  ${YT_BINARY_DIR}/yt/yt/client/arrow/fbs/SparseTensor.fbs.cpp
 )
 target_fbs_source(yt-client-arrow
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/client/arrow/fbs/Message.fbs
+  ${YT_SOURCE_DIR}/yt/yt/client/arrow/fbs/Message.fbs
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
 )
 target_fbs_source(yt-client-arrow
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/client/arrow/fbs/Schema.fbs
+  ${YT_SOURCE_DIR}/yt/yt/client/arrow/fbs/Schema.fbs
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
 )
 target_fbs_source(yt-client-arrow
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/client/arrow/fbs/Tensor.fbs
+  ${YT_SOURCE_DIR}/yt/yt/client/arrow/fbs/Tensor.fbs
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
 )
 target_fbs_source(yt-client-arrow
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/client/arrow/fbs/SparseTensor.fbs
+  ${YT_SOURCE_DIR}/yt/yt/client/arrow/fbs/SparseTensor.fbs
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
 )

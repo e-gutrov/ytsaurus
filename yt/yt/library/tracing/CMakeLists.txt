@@ -22,8 +22,8 @@ target_link_libraries(yt-library-tracing PUBLIC
   yt_proto-yt-core
 )
 target_sources(yt-library-tracing PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/tracing/public.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/tracing/tracer.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/tracing/async_queue_trace.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/tracing/batch_trace.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/tracing/public.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/tracing/tracer.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/tracing/async_queue_trace.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/tracing/batch_trace.cpp
 )

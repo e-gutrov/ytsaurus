@@ -12,7 +12,7 @@ target_compile_options(llvm16-lib-TargetParser PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(llvm16-lib-TargetParser PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/TargetParser
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/TargetParser
 )
 target_link_libraries(llvm16-lib-TargetParser PUBLIC
   contrib-libs-linux-headers
@@ -22,14 +22,14 @@ target_link_libraries(llvm16-lib-TargetParser PUBLIC
   llvm16-lib-Support
 )
 target_sources(llvm16-lib-TargetParser PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/TargetParser/AArch64TargetParser.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/TargetParser/ARMTargetParser.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/TargetParser/ARMTargetParserCommon.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/TargetParser/CSKYTargetParser.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/TargetParser/Host.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/TargetParser/LoongArchTargetParser.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/TargetParser/RISCVTargetParser.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/TargetParser/TargetParser.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/TargetParser/Triple.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/TargetParser/X86TargetParser.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/TargetParser/AArch64TargetParser.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/TargetParser/ARMTargetParser.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/TargetParser/ARMTargetParserCommon.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/TargetParser/CSKYTargetParser.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/TargetParser/Host.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/TargetParser/LoongArchTargetParser.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/TargetParser/RISCVTargetParser.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/TargetParser/TargetParser.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/TargetParser/Triple.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/TargetParser/X86TargetParser.cpp
 )

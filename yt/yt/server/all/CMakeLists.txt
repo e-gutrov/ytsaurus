@@ -53,7 +53,7 @@ target_link_options(ytserver-all PRIVATE
   -lutil
 )
 target_sources(ytserver-all PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/all/main.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/all/main.cpp
 )
 target_allocator(ytserver-all
   cpp-malloc-tcmalloc

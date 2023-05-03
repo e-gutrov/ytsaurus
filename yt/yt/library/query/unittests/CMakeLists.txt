@@ -13,7 +13,7 @@ target_compile_options(unittester-query PRIVATE
   -Wdeprecated-this-capture
 )
 target_include_directories(unittester-query PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/sparsehash/src
+  ${YT_SOURCE_DIR}/contrib/libs/sparsehash/src
 )
 target_link_libraries(unittester-query PUBLIC
   contrib-libs-linux-headers
@@ -42,13 +42,13 @@ target_link_options(unittester-query PRIVATE
   -lutil
 )
 target_sources(unittester-query PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/query/unittests/ast_ut.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/query/unittests/ql_computed_columns_ut.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/query/unittests/ql_expressions_ut.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/query/unittests/ql_helpers.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/query/unittests/ql_query_ut.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/query/unittests/ql_range_inference_ut.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/query/unittests/ql_range_coordination_ut.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/query/unittests/ast_ut.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/query/unittests/ql_computed_columns_ut.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/query/unittests/ql_expressions_ut.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/query/unittests/ql_helpers.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/query/unittests/ql_query_ut.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/query/unittests/ql_range_inference_ut.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/query/unittests/ql_range_coordination_ut.cpp
 )
 add_test(
   NAME

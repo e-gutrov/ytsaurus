@@ -18,8 +18,8 @@ target_link_libraries(cpp-roren-yt PUBLIC
   cpp-mapreduce-client
 )
 target_sources(cpp-roren-yt PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/cpp/roren/yt/jobs.cpp
-  ${CMAKE_SOURCE_DIR}/yt/cpp/roren/yt/yt.cpp
-  ${CMAKE_SOURCE_DIR}/yt/cpp/roren/yt/yt_io_private.cpp
-  ${CMAKE_SOURCE_DIR}/yt/cpp/roren/yt/yt_graph.cpp
+  ${YT_SOURCE_DIR}/yt/cpp/roren/yt/jobs.cpp
+  ${YT_SOURCE_DIR}/yt/cpp/roren/yt/yt.cpp
+  ${YT_SOURCE_DIR}/yt/cpp/roren/yt/yt_io_private.cpp
+  ${YT_SOURCE_DIR}/yt/cpp/roren/yt/yt_graph.cpp
 )

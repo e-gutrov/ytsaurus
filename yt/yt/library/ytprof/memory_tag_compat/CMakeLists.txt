@@ -26,5 +26,5 @@ target_link_libraries(library-ytprof-memory_tag_compat.global PUBLIC
   yt-library-ytprof
 )
 target_sources(library-ytprof-memory_tag_compat.global PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/ytprof/memory_tag_compat/compat.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/ytprof/memory_tag_compat/compat.cpp
 )

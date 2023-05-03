@@ -9,7 +9,7 @@
 
 add_library(restricted-boost-utility INTERFACE)
 target_include_directories(restricted-boost-utility INTERFACE
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/boost/utility/include
+  ${YT_SOURCE_DIR}/contrib/restricted/boost/utility/include
 )
 target_link_libraries(restricted-boost-utility INTERFACE
   contrib-libs-linux-headers

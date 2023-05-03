@@ -12,7 +12,7 @@ target_compile_options(ExecutionEngine-Orc-Shared PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(ExecutionEngine-Orc-Shared PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/Shared
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/Shared
 )
 target_link_libraries(ExecutionEngine-Orc-Shared PUBLIC
   contrib-libs-linux-headers
@@ -21,8 +21,8 @@ target_link_libraries(ExecutionEngine-Orc-Shared PUBLIC
   llvm16-lib-Support
 )
 target_sources(ExecutionEngine-Orc-Shared PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/Shared/AllocationActions.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/Shared/OrcError.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/Shared/OrcRTBridge.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/Shared/SimpleRemoteEPCUtils.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/Shared/AllocationActions.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/Shared/OrcError.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/Shared/OrcRTBridge.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/Shared/SimpleRemoteEPCUtils.cpp
 )

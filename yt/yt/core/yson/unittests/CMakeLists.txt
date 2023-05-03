@@ -58,19 +58,19 @@ target_link_options(unittester-core-yson PRIVATE
   -lutil
 )
 target_proto_messages(unittester-core-yson PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/yson/unittests/proto/protobuf_yson_ut.proto
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/yson/unittests/proto/protobuf_yson_casing_ut.proto
+  ${YT_SOURCE_DIR}/yt/yt/core/yson/unittests/proto/protobuf_yson_ut.proto
+  ${YT_SOURCE_DIR}/yt/yt/core/yson/unittests/proto/protobuf_yson_casing_ut.proto
 )
 target_sources(unittester-core-yson PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/yson/unittests/filter_ut.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/yson/unittests/lexer_ut.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/yson/unittests/protobuf_yson_ut.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/yson/unittests/ypath_designated_yson_consumer_ut.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/yson/unittests/yson_parser_ut.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/yson/unittests/yson_pull_parser_ut.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/yson/unittests/yson_token_writer_ut.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/yson/unittests/yson_ut.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/yson/unittests/yson_writer_ut.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/yson/unittests/filter_ut.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/yson/unittests/lexer_ut.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/yson/unittests/protobuf_yson_ut.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/yson/unittests/ypath_designated_yson_consumer_ut.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/yson/unittests/yson_parser_ut.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/yson/unittests/yson_pull_parser_ut.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/yson/unittests/yson_token_writer_ut.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/yson/unittests/yson_ut.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/yson/unittests/yson_writer_ut.cpp
 )
 add_test(
   NAME
@@ -97,17 +97,17 @@ target_allocator(unittester-core-yson
 )
 target_proto_addincls(unittester-core-yson
   ./yt
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_SOURCE_DIR}/contrib/libs/protobuf/src
-  ${CMAKE_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}/contrib/libs/protobuf/src
+  ${YT_SOURCE_DIR}/yt
+  ${YT_BINARY_DIR}
+  ${YT_SOURCE_DIR}
+  ${YT_SOURCE_DIR}/yt
+  ${YT_SOURCE_DIR}/yt
+  ${YT_SOURCE_DIR}/contrib/libs/protobuf/src
+  ${YT_BINARY_DIR}
+  ${YT_SOURCE_DIR}/contrib/libs/protobuf/src
 )
 target_proto_outs(unittester-core-yson
-  --cpp_out=${CMAKE_BINARY_DIR}/yt
-  --cpp_styleguide_out=${CMAKE_BINARY_DIR}/yt
+  --cpp_out=${YT_BINARY_DIR}/yt
+  --cpp_styleguide_out=${YT_BINARY_DIR}/yt
 )
 vcs_info(unittester-core-yson)

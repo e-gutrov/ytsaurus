@@ -36,7 +36,7 @@ target_compile_options(server-lib-controller_agent PRIVATE
   -Wdeprecated-this-capture
 )
 target_include_directories(server-lib-controller_agent PUBLIC
-  ${CMAKE_BINARY_DIR}/yt
+  ${YT_BINARY_DIR}/yt
 )
 target_link_libraries(server-lib-controller_agent PUBLIC
   contrib-libs-linux-headers
@@ -48,31 +48,31 @@ target_link_libraries(server-lib-controller_agent PUBLIC
   contrib-libs-protobuf
 )
 target_proto_messages(server-lib-controller_agent PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/controller_agent/proto/job_tracker_service.proto
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/controller_agent/proto/job_spec_service.proto
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/controller_agent/proto/job_tracker_service.proto
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/controller_agent/proto/job_spec_service.proto
 )
 target_sources(server-lib-controller_agent PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/controller_agent/serialize.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/controller_agent/structs.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/controller_agent/persistence.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/controller_agent/progress_counter.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/controller_agent/read_range_registry.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/controller_agent/job_size_constraints.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/controller_agent/helpers.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/controller_agent/public.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/controller_agent/serialize.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/controller_agent/structs.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/controller_agent/persistence.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/controller_agent/progress_counter.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/controller_agent/read_range_registry.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/controller_agent/job_size_constraints.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/controller_agent/helpers.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/controller_agent/public.cpp
 )
 target_proto_addincls(server-lib-controller_agent
   ./yt
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_SOURCE_DIR}/contrib/libs/protobuf/src
-  ${CMAKE_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}/contrib/libs/protobuf/src
+  ${YT_SOURCE_DIR}/yt
+  ${YT_BINARY_DIR}
+  ${YT_SOURCE_DIR}
+  ${YT_SOURCE_DIR}/yt
+  ${YT_SOURCE_DIR}/yt
+  ${YT_SOURCE_DIR}/contrib/libs/protobuf/src
+  ${YT_BINARY_DIR}
+  ${YT_SOURCE_DIR}/contrib/libs/protobuf/src
 )
 target_proto_outs(server-lib-controller_agent
-  --cpp_out=${CMAKE_BINARY_DIR}/yt
-  --cpp_styleguide_out=${CMAKE_BINARY_DIR}/yt
+  --cpp_out=${YT_BINARY_DIR}/yt
+  --cpp_styleguide_out=${YT_BINARY_DIR}/yt
 )

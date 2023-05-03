@@ -22,17 +22,17 @@ target_link_libraries(server-lib-misc PUBLIC
   library-cpp-porto
 )
 target_sources(server-lib-misc PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/misc/address_helpers.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/misc/archive_reporter.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/misc/cluster_connection.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/misc/config.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/misc/disk_health_checker.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/misc/fork_executor.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/misc/format_manager.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/misc/job_table_schema.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/misc/private.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/misc/profiling_helpers.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/misc/reboot_manager.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/misc/address_helpers.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/misc/archive_reporter.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/misc/cluster_connection.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/misc/config.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/misc/disk_health_checker.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/misc/fork_executor.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/misc/format_manager.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/misc/job_table_schema.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/misc/private.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/misc/profiling_helpers.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/misc/reboot_manager.cpp
 )
 
 add_global_library_for(server-lib-misc.global server-lib-misc)
@@ -49,5 +49,5 @@ target_link_libraries(server-lib-misc.global PUBLIC
   library-cpp-porto
 )
 target_sources(server-lib-misc.global PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/misc/public.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/misc/public.cpp
 )

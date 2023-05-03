@@ -35,7 +35,7 @@ target_link_options(unittester-core-bus PRIVATE
   -lutil
 )
 target_sources(unittester-core-bus PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/bus/unittests/bus_ut.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/bus/unittests/bus_ut.cpp
 )
 add_test(
   NAME

@@ -25,11 +25,11 @@ target_link_libraries(server-lib-rpc_proxy PUBLIC
   yt-yt-core
 )
 target_sources(server-lib-rpc_proxy PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/rpc_proxy/access_checker.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/rpc_proxy/api_service.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/rpc_proxy/config.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/rpc_proxy/format_row_stream.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/rpc_proxy/helpers.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/rpc_proxy/proxy_coordinator.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/rpc_proxy/security_manager.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/rpc_proxy/access_checker.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/rpc_proxy/api_service.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/rpc_proxy/config.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/rpc_proxy/format_row_stream.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/rpc_proxy/helpers.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/rpc_proxy/proxy_coordinator.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/rpc_proxy/security_manager.cpp
 )

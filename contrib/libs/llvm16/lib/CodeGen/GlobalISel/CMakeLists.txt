@@ -12,7 +12,7 @@ target_compile_options(lib-CodeGen-GlobalISel PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(lib-CodeGen-GlobalISel PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel
 )
 target_link_libraries(lib-CodeGen-GlobalISel PUBLIC
   contrib-libs-linux-headers
@@ -29,28 +29,28 @@ target_link_libraries(lib-CodeGen-GlobalISel PUBLIC
   lib-Transforms-Utils
 )
 target_sources(lib-CodeGen-GlobalISel PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/CSEInfo.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/CSEMIRBuilder.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/CallLowering.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/Combiner.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/CombinerHelper.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/GISelChangeObserver.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/GISelKnownBits.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/GlobalISel.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/IRTranslator.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/InlineAsmLowering.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/InstructionSelect.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/InstructionSelector.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/LegacyLegalizerInfo.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/LegalityPredicates.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/LegalizeMutations.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/Legalizer.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/LegalizerHelper.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/LegalizerInfo.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/LoadStoreOpt.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/Localizer.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/LostDebugLocObserver.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/MachineIRBuilder.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/RegBankSelect.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/Utils.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/CSEInfo.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/CSEMIRBuilder.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/CallLowering.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/Combiner.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/CombinerHelper.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/GISelChangeObserver.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/GISelKnownBits.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/GlobalISel.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/IRTranslator.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/InlineAsmLowering.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/InstructionSelect.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/InstructionSelector.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/LegacyLegalizerInfo.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/LegalityPredicates.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/LegalizeMutations.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/Legalizer.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/LegalizerHelper.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/LegalizerInfo.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/LoadStoreOpt.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/Localizer.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/LostDebugLocObserver.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/MachineIRBuilder.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/RegBankSelect.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/GlobalISel/Utils.cpp
 )

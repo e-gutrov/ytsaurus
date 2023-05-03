@@ -13,7 +13,7 @@ target_compile_options(llvm16-lib-Target PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(llvm16-lib-Target PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Target
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Target
 )
 target_link_libraries(llvm16-lib-Target PUBLIC
   contrib-libs-linux-headers
@@ -27,9 +27,9 @@ target_link_libraries(llvm16-lib-Target PUBLIC
   llvm16-lib-TargetParser
 )
 target_sources(llvm16-lib-Target PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Target/Target.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Target/TargetIntrinsicInfo.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Target/TargetLoweringObjectFile.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Target/TargetMachine.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Target/TargetMachineC.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Target/Target.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Target/TargetIntrinsicInfo.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Target/TargetLoweringObjectFile.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Target/TargetMachine.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Target/TargetMachineC.cpp
 )

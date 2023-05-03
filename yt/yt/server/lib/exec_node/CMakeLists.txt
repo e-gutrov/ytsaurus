@@ -35,24 +35,24 @@ target_link_libraries(server-lib-exec_node PUBLIC
   contrib-libs-protobuf
 )
 target_proto_messages(server-lib-exec_node PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/exec_node/proto/supervisor_service.proto
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/exec_node/proto/supervisor_service.proto
 )
 target_sources(server-lib-exec_node PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/exec_node/public.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/exec_node/config.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/exec_node/helpers.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/exec_node/public.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/exec_node/config.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/exec_node/helpers.cpp
 )
 target_proto_addincls(server-lib-exec_node
   ./
-  ${CMAKE_SOURCE_DIR}/
-  ${CMAKE_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_SOURCE_DIR}/contrib/libs/protobuf/src
-  ${CMAKE_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}/contrib/libs/protobuf/src
+  ${YT_SOURCE_DIR}/
+  ${YT_BINARY_DIR}
+  ${YT_SOURCE_DIR}
+  ${YT_SOURCE_DIR}/yt
+  ${YT_SOURCE_DIR}/contrib/libs/protobuf/src
+  ${YT_BINARY_DIR}
+  ${YT_SOURCE_DIR}/contrib/libs/protobuf/src
 )
 target_proto_outs(server-lib-exec_node
-  --cpp_out=${CMAKE_BINARY_DIR}/
-  --cpp_styleguide_out=${CMAKE_BINARY_DIR}/
+  --cpp_out=${YT_BINARY_DIR}/
+  --cpp_styleguide_out=${YT_BINARY_DIR}/
 )

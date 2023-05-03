@@ -24,12 +24,12 @@ target_compile_options(clickhouse-base-base PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(clickhouse-base-base PUBLIC
-  ${CMAKE_SOURCE_DIR}/contrib/clickhouse/base
-  ${CMAKE_SOURCE_DIR}/contrib/libs/miniselect/include
-  ${CMAKE_SOURCE_DIR}/contrib/libs/pdqsort
+  ${YT_SOURCE_DIR}/contrib/clickhouse/base
+  ${YT_SOURCE_DIR}/contrib/libs/miniselect/include
+  ${YT_SOURCE_DIR}/contrib/libs/pdqsort
 )
 target_include_directories(clickhouse-base-base PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/cityhash-1.0.2
+  ${YT_SOURCE_DIR}/contrib/restricted/cityhash-1.0.2
 )
 target_link_libraries(clickhouse-base-base PUBLIC
   contrib-libs-linux-headers
@@ -42,26 +42,26 @@ target_link_libraries(clickhouse-base-base PUBLIC
   restricted-patched-replxx
 )
 target_sources(clickhouse-base-base PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/clickhouse/base/base/JSON.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/clickhouse/base/base/LineReader.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/clickhouse/base/base/ReplxxLineReader.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/clickhouse/base/base/StringRef.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/clickhouse/base/base/argsToConfig.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/clickhouse/base/base/coverage.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/clickhouse/base/base/demangle.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/clickhouse/base/base/errnoToString.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/clickhouse/base/base/getAvailableMemoryAmount.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/clickhouse/base/base/getFQDNOrHostName.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/clickhouse/base/base/getMemoryAmount.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/clickhouse/base/base/getPageSize.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/clickhouse/base/base/getThreadId.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/clickhouse/base/base/mremap.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/clickhouse/base/base/phdr_cache.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/clickhouse/base/base/preciseExp10.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/clickhouse/base/base/safeExit.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/clickhouse/base/base/setTerminalEcho.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/clickhouse/base/base/shift10.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/clickhouse/base/base/sleep.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/clickhouse/base/base/terminalColors.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/clickhouse/base/base/throwError.cpp
+  ${YT_SOURCE_DIR}/contrib/clickhouse/base/base/JSON.cpp
+  ${YT_SOURCE_DIR}/contrib/clickhouse/base/base/LineReader.cpp
+  ${YT_SOURCE_DIR}/contrib/clickhouse/base/base/ReplxxLineReader.cpp
+  ${YT_SOURCE_DIR}/contrib/clickhouse/base/base/StringRef.cpp
+  ${YT_SOURCE_DIR}/contrib/clickhouse/base/base/argsToConfig.cpp
+  ${YT_SOURCE_DIR}/contrib/clickhouse/base/base/coverage.cpp
+  ${YT_SOURCE_DIR}/contrib/clickhouse/base/base/demangle.cpp
+  ${YT_SOURCE_DIR}/contrib/clickhouse/base/base/errnoToString.cpp
+  ${YT_SOURCE_DIR}/contrib/clickhouse/base/base/getAvailableMemoryAmount.cpp
+  ${YT_SOURCE_DIR}/contrib/clickhouse/base/base/getFQDNOrHostName.cpp
+  ${YT_SOURCE_DIR}/contrib/clickhouse/base/base/getMemoryAmount.cpp
+  ${YT_SOURCE_DIR}/contrib/clickhouse/base/base/getPageSize.cpp
+  ${YT_SOURCE_DIR}/contrib/clickhouse/base/base/getThreadId.cpp
+  ${YT_SOURCE_DIR}/contrib/clickhouse/base/base/mremap.cpp
+  ${YT_SOURCE_DIR}/contrib/clickhouse/base/base/phdr_cache.cpp
+  ${YT_SOURCE_DIR}/contrib/clickhouse/base/base/preciseExp10.cpp
+  ${YT_SOURCE_DIR}/contrib/clickhouse/base/base/safeExit.cpp
+  ${YT_SOURCE_DIR}/contrib/clickhouse/base/base/setTerminalEcho.cpp
+  ${YT_SOURCE_DIR}/contrib/clickhouse/base/base/shift10.cpp
+  ${YT_SOURCE_DIR}/contrib/clickhouse/base/base/sleep.cpp
+  ${YT_SOURCE_DIR}/contrib/clickhouse/base/base/terminalColors.cpp
+  ${YT_SOURCE_DIR}/contrib/clickhouse/base/base/throwError.cpp
 )

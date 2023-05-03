@@ -16,8 +16,8 @@ set(YT_MAX_LINK_JOBS 5 CACHE STRING "Maximum parallel link jobs for Ninja genera
 set_property(GLOBAL PROPERTY JOB_POOLS link_jobs=${YT_MAX_LINK_JOBS})
 set(CMAKE_JOB_POOL_LINK link_jobs)
 
-list(APPEND CMAKE_MODULE_PATH ${CMAKE_BINARY_DIR} ${CMAKE_SOURCE_DIR}/cmake)
-include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR})
+list(APPEND CMAKE_MODULE_PATH ${YT_BINARY_DIR} ${YT_SOURCE_DIR}/cmake)
+include_directories(${YT_SOURCE_DIR} ${YT_BINARY_DIR})
 list(APPEND CMAKE_CTEST_ARGUMENTS "--output-on-failure")
 enable_testing()
 
@@ -36,12 +36,12 @@ include(cmake/protobuf.cmake)
 include(cmake/global_vars.cmake)
 
 if (CMAKE_CROSSCOMPILING)
-  include(${CMAKE_BINARY_DIR}/conan_paths.cmake)
+  include(${YT_BINARY_DIR}/conan_paths.cmake)
 else()
   conan_cmake_autodetect(settings)
   conan_cmake_install(
-    PATH_OR_REFERENCE ${CMAKE_SOURCE_DIR}
-    INSTALL_FOLDER ${CMAKE_BINARY_DIR}
+    PATH_OR_REFERENCE ${YT_SOURCE_DIR}
+    INSTALL_FOLDER ${YT_BINARY_DIR}
     BUILD missing
     REMOTE conancenter
     SETTINGS ${settings}

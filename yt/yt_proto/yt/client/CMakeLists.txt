@@ -237,7 +237,7 @@ get_built_tool_path(
 
 add_library(yt_proto-yt-client)
 target_include_directories(yt_proto-yt-client PUBLIC
-  ${CMAKE_BINARY_DIR}/yt
+  ${YT_BINARY_DIR}/yt
 )
 target_link_libraries(yt_proto-yt-client PUBLIC
   contrib-libs-linux-headers
@@ -247,38 +247,38 @@ target_link_libraries(yt_proto-yt-client PUBLIC
   contrib-libs-protobuf
 )
 target_proto_messages(yt_proto-yt-client PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt_proto/yt/client/api/rpc_proxy/proto/api_service.proto
-  ${CMAKE_SOURCE_DIR}/yt/yt_proto/yt/client/api/rpc_proxy/proto/discovery_service.proto
-  ${CMAKE_SOURCE_DIR}/yt/yt_proto/yt/client/cell_master/proto/cell_directory.proto
-  ${CMAKE_SOURCE_DIR}/yt/yt_proto/yt/client/chaos_client/proto/replication_card.proto
-  ${CMAKE_SOURCE_DIR}/yt/yt_proto/yt/client/chunk_client/proto/data_statistics.proto
-  ${CMAKE_SOURCE_DIR}/yt/yt_proto/yt/client/chunk_client/proto/chunk_meta.proto
-  ${CMAKE_SOURCE_DIR}/yt/yt_proto/yt/client/chunk_client/proto/read_limit.proto
-  ${CMAKE_SOURCE_DIR}/yt/yt_proto/yt/client/chunk_client/proto/chunk_spec.proto
-  ${CMAKE_SOURCE_DIR}/yt/yt_proto/yt/client/chunk_client/proto/confirm_chunk_replica_info.proto
-  ${CMAKE_SOURCE_DIR}/yt/yt_proto/yt/client/hive/proto/timestamp_map.proto
-  ${CMAKE_SOURCE_DIR}/yt/yt_proto/yt/client/hive/proto/cluster_directory.proto
-  ${CMAKE_SOURCE_DIR}/yt/yt_proto/yt/client/node_tracker_client/proto/node.proto
-  ${CMAKE_SOURCE_DIR}/yt/yt_proto/yt/client/node_tracker_client/proto/node_directory.proto
-  ${CMAKE_SOURCE_DIR}/yt/yt_proto/yt/client/table_chunk_format/proto/chunk_meta.proto
-  ${CMAKE_SOURCE_DIR}/yt/yt_proto/yt/client/table_chunk_format/proto/column_meta.proto
-  ${CMAKE_SOURCE_DIR}/yt/yt_proto/yt/client/table_chunk_format/proto/wire_protocol.proto
-  ${CMAKE_SOURCE_DIR}/yt/yt_proto/yt/client/transaction_client/proto/timestamp_service.proto
-  ${CMAKE_SOURCE_DIR}/yt/yt_proto/yt/client/query_client/proto/query_statistics.proto
-  ${CMAKE_SOURCE_DIR}/yt/yt_proto/yt/client/misc/proto/workload.proto
+  ${YT_SOURCE_DIR}/yt/yt_proto/yt/client/api/rpc_proxy/proto/api_service.proto
+  ${YT_SOURCE_DIR}/yt/yt_proto/yt/client/api/rpc_proxy/proto/discovery_service.proto
+  ${YT_SOURCE_DIR}/yt/yt_proto/yt/client/cell_master/proto/cell_directory.proto
+  ${YT_SOURCE_DIR}/yt/yt_proto/yt/client/chaos_client/proto/replication_card.proto
+  ${YT_SOURCE_DIR}/yt/yt_proto/yt/client/chunk_client/proto/data_statistics.proto
+  ${YT_SOURCE_DIR}/yt/yt_proto/yt/client/chunk_client/proto/chunk_meta.proto
+  ${YT_SOURCE_DIR}/yt/yt_proto/yt/client/chunk_client/proto/read_limit.proto
+  ${YT_SOURCE_DIR}/yt/yt_proto/yt/client/chunk_client/proto/chunk_spec.proto
+  ${YT_SOURCE_DIR}/yt/yt_proto/yt/client/chunk_client/proto/confirm_chunk_replica_info.proto
+  ${YT_SOURCE_DIR}/yt/yt_proto/yt/client/hive/proto/timestamp_map.proto
+  ${YT_SOURCE_DIR}/yt/yt_proto/yt/client/hive/proto/cluster_directory.proto
+  ${YT_SOURCE_DIR}/yt/yt_proto/yt/client/node_tracker_client/proto/node.proto
+  ${YT_SOURCE_DIR}/yt/yt_proto/yt/client/node_tracker_client/proto/node_directory.proto
+  ${YT_SOURCE_DIR}/yt/yt_proto/yt/client/table_chunk_format/proto/chunk_meta.proto
+  ${YT_SOURCE_DIR}/yt/yt_proto/yt/client/table_chunk_format/proto/column_meta.proto
+  ${YT_SOURCE_DIR}/yt/yt_proto/yt/client/table_chunk_format/proto/wire_protocol.proto
+  ${YT_SOURCE_DIR}/yt/yt_proto/yt/client/transaction_client/proto/timestamp_service.proto
+  ${YT_SOURCE_DIR}/yt/yt_proto/yt/client/query_client/proto/query_statistics.proto
+  ${YT_SOURCE_DIR}/yt/yt_proto/yt/client/misc/proto/workload.proto
 )
 target_proto_addincls(yt_proto-yt-client
   ./yt
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_SOURCE_DIR}/contrib/libs/protobuf/src
-  ${CMAKE_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}/contrib/libs/protobuf/src
+  ${YT_SOURCE_DIR}/yt
+  ${YT_BINARY_DIR}
+  ${YT_SOURCE_DIR}
+  ${YT_SOURCE_DIR}/yt
+  ${YT_SOURCE_DIR}/yt
+  ${YT_SOURCE_DIR}/contrib/libs/protobuf/src
+  ${YT_BINARY_DIR}
+  ${YT_SOURCE_DIR}/contrib/libs/protobuf/src
 )
 target_proto_outs(yt_proto-yt-client
-  --cpp_out=${CMAKE_BINARY_DIR}/yt
-  --cpp_styleguide_out=${CMAKE_BINARY_DIR}/yt
+  --cpp_out=${YT_BINARY_DIR}/yt
+  --cpp_styleguide_out=${YT_BINARY_DIR}/yt
 )

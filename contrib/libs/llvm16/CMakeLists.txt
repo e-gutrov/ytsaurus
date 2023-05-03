@@ -12,8 +12,8 @@ add_subdirectory(utils)
 
 add_library(contrib-libs-llvm16 INTERFACE)
 target_include_directories(contrib-libs-llvm16 INTERFACE
-  ${CMAKE_BINARY_DIR}/contrib/libs/llvm16/include
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/include
+  ${YT_BINARY_DIR}/contrib/libs/llvm16/include
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/include
 )
 target_link_libraries(contrib-libs-llvm16 INTERFACE
   contrib-libs-linux-headers

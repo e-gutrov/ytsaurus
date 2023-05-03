@@ -15,15 +15,15 @@ target_compile_options(yt-chyt-server PRIVATE
   -Wdeprecated-this-capture
 )
 target_include_directories(yt-chyt-server PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/clickhouse/src
-  ${CMAKE_SOURCE_DIR}/contrib/clickhouse/base
-  ${CMAKE_SOURCE_DIR}/contrib/libs/double-conversion
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Foundation/include
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Net/include
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Util/include
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/XML/include
-  ${CMAKE_SOURCE_DIR}/contrib/libs/re2
-  ${CMAKE_SOURCE_DIR}/contrib/libs/rapidjson/include
+  ${YT_SOURCE_DIR}/contrib/clickhouse/src
+  ${YT_SOURCE_DIR}/contrib/clickhouse/base
+  ${YT_SOURCE_DIR}/contrib/libs/double-conversion
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Foundation/include
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Net/include
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Util/include
+  ${YT_SOURCE_DIR}/contrib/libs/poco/XML/include
+  ${YT_SOURCE_DIR}/contrib/libs/re2
+  ${YT_SOURCE_DIR}/contrib/libs/rapidjson/include
 )
 target_link_libraries(yt-chyt-server PUBLIC
   contrib-libs-linux-headers
@@ -43,70 +43,70 @@ target_link_libraries(yt-chyt-server PUBLIC
   contrib-deprecated-clickhouse_data_streams_compat
 )
 target_sources(yt-chyt-server PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/block_input_stream.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/block_output_stream.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/bootstrap.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/ch_yt_converter.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/clickhouse_config.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/clickhouse_invoker.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/clickhouse_server.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/clickhouse_service.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/clickhouse_singletons.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/cluster_nodes.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/columnar_conversion.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/computed_columns.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/config_repository.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/config.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/conversion.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/data_type_boolean.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/dictionary_source.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/format.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/function_helpers.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/health_checker.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/helpers.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/host.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/http_handler.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/index.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/invoker_liveness_checker.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/job_size_constraints.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/launcher_compatibility.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/logger.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/logging_transform.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/memory_watchdog.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/poco_config.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/prewhere_block_input_stream.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/private.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/query_analyzer.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/query_context.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/query_registry.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/query_service.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/revision_tracker.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/schema_inference.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/secondary_query_header.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/stack_size_checker.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/statistics_reporter.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/std_helpers.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/storage_base.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/storage_distributor.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/storage_subquery.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/storage_system_clique.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/storages_yt_nodes.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/subquery_spec.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/subquery.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/table_function_yt_list_log_tables.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/table_function_yt_node_attributes.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/table_function_yt_secondary_query.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/table_function_yt_tables.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/table_functions_concat.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/table_functions_list_dir.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/table_functions.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/table_traverser.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/table.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/tcp_handler.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/version.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/virtual_column.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/yt_ch_converter.cpp
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/yt_database.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/block_input_stream.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/block_output_stream.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/bootstrap.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/ch_yt_converter.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/clickhouse_config.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/clickhouse_invoker.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/clickhouse_server.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/clickhouse_service.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/clickhouse_singletons.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/cluster_nodes.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/columnar_conversion.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/computed_columns.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/config_repository.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/config.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/conversion.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/data_type_boolean.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/dictionary_source.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/format.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/function_helpers.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/health_checker.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/helpers.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/host.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/http_handler.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/index.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/invoker_liveness_checker.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/job_size_constraints.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/launcher_compatibility.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/logger.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/logging_transform.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/memory_watchdog.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/poco_config.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/prewhere_block_input_stream.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/private.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/query_analyzer.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/query_context.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/query_registry.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/query_service.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/revision_tracker.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/schema_inference.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/secondary_query_header.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/stack_size_checker.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/statistics_reporter.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/std_helpers.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/storage_base.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/storage_distributor.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/storage_subquery.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/storage_system_clique.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/storages_yt_nodes.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/subquery_spec.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/subquery.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/table_function_yt_list_log_tables.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/table_function_yt_node_attributes.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/table_function_yt_secondary_query.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/table_function_yt_tables.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/table_functions_concat.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/table_functions_list_dir.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/table_functions.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/table_traverser.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/table.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/tcp_handler.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/version.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/virtual_column.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/yt_ch_converter.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/yt_database.cpp
 )
 
 add_global_library_for(yt-chyt-server.global yt-chyt-server)
@@ -114,15 +114,15 @@ target_compile_options(yt-chyt-server.global PRIVATE
   -Wdeprecated-this-capture
 )
 target_include_directories(yt-chyt-server.global PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/clickhouse/src
-  ${CMAKE_SOURCE_DIR}/contrib/clickhouse/base
-  ${CMAKE_SOURCE_DIR}/contrib/libs/double-conversion
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Foundation/include
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Net/include
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Util/include
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/XML/include
-  ${CMAKE_SOURCE_DIR}/contrib/libs/re2
-  ${CMAKE_SOURCE_DIR}/contrib/libs/rapidjson/include
+  ${YT_SOURCE_DIR}/contrib/clickhouse/src
+  ${YT_SOURCE_DIR}/contrib/clickhouse/base
+  ${YT_SOURCE_DIR}/contrib/libs/double-conversion
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Foundation/include
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Net/include
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Util/include
+  ${YT_SOURCE_DIR}/contrib/libs/poco/XML/include
+  ${YT_SOURCE_DIR}/contrib/libs/re2
+  ${YT_SOURCE_DIR}/contrib/libs/rapidjson/include
 )
 target_link_libraries(yt-chyt-server.global PUBLIC
   contrib-libs-linux-headers
@@ -142,5 +142,5 @@ target_link_libraries(yt-chyt-server.global PUBLIC
   contrib-deprecated-clickhouse_data_streams_compat
 )
 target_sources(yt-chyt-server.global PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/chyt/server/functions_version.cpp
+  ${YT_SOURCE_DIR}/yt/chyt/server/functions_version.cpp
 )

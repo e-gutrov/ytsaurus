@@ -13,7 +13,7 @@ target_compile_options(server-lib-io PRIVATE
   -Wdeprecated-this-capture
 )
 target_include_directories(server-lib-io PUBLIC
-  ${CMAKE_BINARY_DIR}/yt
+  ${YT_BINARY_DIR}/yt
 )
 target_link_libraries(server-lib-io PUBLIC
   contrib-libs-linux-headers
@@ -25,19 +25,19 @@ target_link_libraries(server-lib-io PUBLIC
   contrib-libs-liburing
 )
 target_sources(server-lib-io PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/io/config.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/io/gentle_loader.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/io/io_engine.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/io/io_request_slicer.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/io/io_tracker.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/io/io_workload_model.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/io/chunk_fragment.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/io/chunk_file_reader.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/io/chunk_file_reader_adapter.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/io/chunk_file_writer.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/io/helpers.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/io/read_request_combiner.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/io/dynamic_io_engine.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/io/io_engine_base.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/io/io_engine_uring.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/io/config.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/io/gentle_loader.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/io/io_engine.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/io/io_request_slicer.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/io/io_tracker.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/io/io_workload_model.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/io/chunk_fragment.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/io/chunk_file_reader.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/io/chunk_file_reader_adapter.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/io/chunk_file_writer.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/io/helpers.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/io/read_request_combiner.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/io/dynamic_io_engine.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/io/io_engine_base.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/io/io_engine_uring.cpp
 )

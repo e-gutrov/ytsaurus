@@ -19,5 +19,5 @@ target_link_libraries(core-http-mock PUBLIC
   yt-core-http
 )
 target_sources(core-http-mock PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/http/mock/http.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/http/mock/http.cpp
 )

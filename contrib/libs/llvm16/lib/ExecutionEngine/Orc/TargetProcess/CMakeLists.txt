@@ -12,7 +12,7 @@ target_compile_options(ExecutionEngine-Orc-TargetProcess PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(ExecutionEngine-Orc-TargetProcess PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/TargetProcess
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/TargetProcess
 )
 target_link_libraries(ExecutionEngine-Orc-TargetProcess PUBLIC
   contrib-libs-linux-headers
@@ -23,12 +23,12 @@ target_link_libraries(ExecutionEngine-Orc-TargetProcess PUBLIC
   llvm16-lib-TargetParser
 )
 target_sources(ExecutionEngine-Orc-TargetProcess PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/TargetProcess/ExecutorSharedMemoryMapperService.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/TargetProcess/JITLoaderGDB.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/TargetProcess/OrcRTBootstrap.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/TargetProcess/RegisterEHFrames.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/TargetProcess/SimpleExecutorDylibManager.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/TargetProcess/SimpleExecutorMemoryManager.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/TargetProcess/SimpleRemoteEPCServer.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/TargetProcess/TargetExecutionUtils.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/TargetProcess/ExecutorSharedMemoryMapperService.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/TargetProcess/JITLoaderGDB.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/TargetProcess/OrcRTBootstrap.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/TargetProcess/RegisterEHFrames.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/TargetProcess/SimpleExecutorDylibManager.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/TargetProcess/SimpleExecutorMemoryManager.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/TargetProcess/SimpleRemoteEPCServer.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/TargetProcess/TargetExecutionUtils.cpp
 )

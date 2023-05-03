@@ -21,7 +21,7 @@ target_link_libraries(library-tvm-service PUBLIC
   yt-yt-core
 )
 target_sources(library-tvm-service PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/tvm/service/config.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/tvm/service/tvm_service_common.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/tvm/service/tvm_service_dummy.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/tvm/service/config.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/tvm/service/tvm_service_common.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/tvm/service/tvm_service_dummy.cpp
 )

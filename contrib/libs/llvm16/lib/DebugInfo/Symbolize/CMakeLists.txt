@@ -12,7 +12,7 @@ target_compile_options(lib-DebugInfo-Symbolize PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(lib-DebugInfo-Symbolize PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/Symbolize
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/Symbolize
 )
 target_link_libraries(lib-DebugInfo-Symbolize PUBLIC
   contrib-libs-linux-headers
@@ -26,9 +26,9 @@ target_link_libraries(lib-DebugInfo-Symbolize PUBLIC
   llvm16-lib-TargetParser
 )
 target_sources(lib-DebugInfo-Symbolize PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/Symbolize/DIPrinter.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/Symbolize/Markup.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/Symbolize/MarkupFilter.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/Symbolize/SymbolizableObjectFile.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/Symbolize/Symbolize.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/Symbolize/DIPrinter.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/Symbolize/Markup.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/Symbolize/MarkupFilter.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/Symbolize/SymbolizableObjectFile.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/Symbolize/Symbolize.cpp
 )

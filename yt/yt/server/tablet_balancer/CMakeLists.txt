@@ -28,13 +28,13 @@ target_link_libraries(yt-server-tablet_balancer PUBLIC
   server-lib-tablet_server
 )
 target_sources(yt-server-tablet_balancer PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/tablet_balancer/action_manager.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/tablet_balancer/bootstrap.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/tablet_balancer/bundle_state.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/tablet_balancer/config.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/tablet_balancer/dynamic_config_manager.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/tablet_balancer/helpers.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/tablet_balancer/program.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/tablet_balancer/tablet_action.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/tablet_balancer/tablet_balancer.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/tablet_balancer/action_manager.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/tablet_balancer/bootstrap.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/tablet_balancer/bundle_state.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/tablet_balancer/config.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/tablet_balancer/dynamic_config_manager.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/tablet_balancer/helpers.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/tablet_balancer/program.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/tablet_balancer/tablet_action.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/tablet_balancer/tablet_balancer.cpp
 )

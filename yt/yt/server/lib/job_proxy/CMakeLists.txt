@@ -19,5 +19,5 @@ target_link_libraries(server-lib-job_proxy PUBLIC
   server-lib-misc
 )
 target_sources(server-lib-job_proxy PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/job_proxy/config.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/job_proxy/config.cpp
 )

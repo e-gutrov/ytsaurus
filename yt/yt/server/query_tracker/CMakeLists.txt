@@ -29,13 +29,13 @@ target_link_libraries(yt-server-query_tracker PUBLIC
   yt-ytlib-query_tracker_client
 )
 target_sources(yt-server-query_tracker PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/query_tracker/bootstrap.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/query_tracker/chyt_engine.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/query_tracker/config.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/query_tracker/dynamic_config_manager.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/query_tracker/handler_base.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/query_tracker/query_tracker.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/query_tracker/mock_engine.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/query_tracker/ql_engine.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/query_tracker/yql_engine.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/query_tracker/bootstrap.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/query_tracker/chyt_engine.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/query_tracker/config.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/query_tracker/dynamic_config_manager.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/query_tracker/handler_base.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/query_tracker/query_tracker.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/query_tracker/mock_engine.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/query_tracker/ql_engine.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/query_tracker/yql_engine.cpp
 )

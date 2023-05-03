@@ -18,7 +18,7 @@ target_compile_options(restricted-boost-thread PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(restricted-boost-thread PUBLIC
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/boost/thread/include
+  ${YT_SOURCE_DIR}/contrib/restricted/boost/thread/include
 )
 target_link_libraries(restricted-boost-thread PUBLIC
   contrib-libs-linux-headers
@@ -54,7 +54,7 @@ target_link_libraries(restricted-boost-thread PUBLIC
   restricted-boost-winapi
 )
 target_sources(restricted-boost-thread PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/boost/thread/src/future.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/boost/thread/src/pthread/once.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/boost/thread/src/pthread/thread.cpp
+  ${YT_SOURCE_DIR}/contrib/restricted/boost/thread/src/future.cpp
+  ${YT_SOURCE_DIR}/contrib/restricted/boost/thread/src/pthread/once.cpp
+  ${YT_SOURCE_DIR}/contrib/restricted/boost/thread/src/pthread/thread.cpp
 )

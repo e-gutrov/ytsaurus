@@ -18,11 +18,11 @@ target_compile_options(libs-poco-JSON PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(libs-poco-JSON PUBLIC
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/JSON/include
+  ${YT_SOURCE_DIR}/contrib/libs/poco/JSON/include
 )
 target_include_directories(libs-poco-JSON PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Foundation/include
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/JSON/src
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Foundation/include
+  ${YT_SOURCE_DIR}/contrib/libs/poco/JSON/src
 )
 target_link_libraries(libs-poco-JSON PUBLIC
   contrib-libs-linux-headers
@@ -30,17 +30,17 @@ target_link_libraries(libs-poco-JSON PUBLIC
   libs-poco-Foundation
 )
 target_sources(libs-poco-JSON PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/JSON/src/Array.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/JSON/src/Handler.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/JSON/src/JSONException.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/JSON/src/Object.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/JSON/src/ParseHandler.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/JSON/src/Parser.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/JSON/src/ParserImpl.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/JSON/src/PrintHandler.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/JSON/src/Query.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/JSON/src/Stringifier.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/JSON/src/Template.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/JSON/src/TemplateCache.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/JSON/src/pdjson.c
+  ${YT_SOURCE_DIR}/contrib/libs/poco/JSON/src/Array.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/JSON/src/Handler.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/JSON/src/JSONException.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/JSON/src/Object.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/JSON/src/ParseHandler.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/JSON/src/Parser.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/JSON/src/ParserImpl.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/JSON/src/PrintHandler.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/JSON/src/Query.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/JSON/src/Stringifier.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/JSON/src/Template.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/JSON/src/TemplateCache.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/JSON/src/pdjson.c
 )

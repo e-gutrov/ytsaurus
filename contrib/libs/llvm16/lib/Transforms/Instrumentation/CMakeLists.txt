@@ -12,7 +12,7 @@ target_compile_options(lib-Transforms-Instrumentation PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(lib-Transforms-Instrumentation PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation
 )
 target_link_libraries(lib-Transforms-Instrumentation PUBLIC
   contrib-libs-linux-headers
@@ -29,25 +29,25 @@ target_link_libraries(lib-Transforms-Instrumentation PUBLIC
   lib-Transforms-Utils
 )
 target_sources(lib-Transforms-Instrumentation PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/AddressSanitizer.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/BoundsChecking.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/CGProfile.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/ControlHeightReduction.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/DataFlowSanitizer.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/GCOVProfiling.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/HWAddressSanitizer.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/IndirectCallPromotion.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/InstrOrderFile.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/InstrProfiling.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/Instrumentation.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/KCFI.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/MemProfiler.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/MemorySanitizer.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/PGOInstrumentation.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/PGOMemOPSizeOpt.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/PoisonChecking.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/SanitizerBinaryMetadata.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/SanitizerCoverage.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/ThreadSanitizer.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/ValueProfileCollector.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/AddressSanitizer.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/BoundsChecking.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/CGProfile.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/ControlHeightReduction.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/DataFlowSanitizer.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/GCOVProfiling.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/HWAddressSanitizer.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/IndirectCallPromotion.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/InstrOrderFile.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/InstrProfiling.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/Instrumentation.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/KCFI.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/MemProfiler.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/MemorySanitizer.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/PGOInstrumentation.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/PGOMemOPSizeOpt.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/PoisonChecking.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/SanitizerBinaryMetadata.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/SanitizerCoverage.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/ThreadSanitizer.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/Instrumentation/ValueProfileCollector.cpp
 )

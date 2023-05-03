@@ -19,22 +19,22 @@ target_link_libraries(yt-client-driver PUBLIC
   yt-client-formats
 )
 target_sources(yt-client-driver PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/client/driver/admin_commands.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/client/driver/authentication_commands.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/client/driver/chaos_commands.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/client/driver/command.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/client/driver/config.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/client/driver/cypress_commands.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/client/driver/driver.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/client/driver/etc_commands.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/client/driver/file_commands.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/client/driver/helpers.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/client/driver/journal_commands.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/client/driver/proxy_discovery_cache.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/client/driver/query_commands.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/client/driver/queue_commands.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/client/driver/scheduler_commands.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/client/driver/table_commands.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/client/driver/transaction_commands.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/client/driver/internal_commands.cpp
+  ${YT_SOURCE_DIR}/yt/yt/client/driver/admin_commands.cpp
+  ${YT_SOURCE_DIR}/yt/yt/client/driver/authentication_commands.cpp
+  ${YT_SOURCE_DIR}/yt/yt/client/driver/chaos_commands.cpp
+  ${YT_SOURCE_DIR}/yt/yt/client/driver/command.cpp
+  ${YT_SOURCE_DIR}/yt/yt/client/driver/config.cpp
+  ${YT_SOURCE_DIR}/yt/yt/client/driver/cypress_commands.cpp
+  ${YT_SOURCE_DIR}/yt/yt/client/driver/driver.cpp
+  ${YT_SOURCE_DIR}/yt/yt/client/driver/etc_commands.cpp
+  ${YT_SOURCE_DIR}/yt/yt/client/driver/file_commands.cpp
+  ${YT_SOURCE_DIR}/yt/yt/client/driver/helpers.cpp
+  ${YT_SOURCE_DIR}/yt/yt/client/driver/journal_commands.cpp
+  ${YT_SOURCE_DIR}/yt/yt/client/driver/proxy_discovery_cache.cpp
+  ${YT_SOURCE_DIR}/yt/yt/client/driver/query_commands.cpp
+  ${YT_SOURCE_DIR}/yt/yt/client/driver/queue_commands.cpp
+  ${YT_SOURCE_DIR}/yt/yt/client/driver/scheduler_commands.cpp
+  ${YT_SOURCE_DIR}/yt/yt/client/driver/table_commands.cpp
+  ${YT_SOURCE_DIR}/yt/yt/client/driver/transaction_commands.cpp
+  ${YT_SOURCE_DIR}/yt/yt/client/driver/internal_commands.cpp
 )

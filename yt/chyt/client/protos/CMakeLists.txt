@@ -21,7 +21,7 @@ get_built_tool_path(
 
 add_library(chyt-client-protos)
 target_include_directories(chyt-client-protos PUBLIC
-  ${CMAKE_BINARY_DIR}/yt
+  ${YT_BINARY_DIR}/yt
 )
 target_link_libraries(chyt-client-protos PUBLIC
   contrib-libs-linux-headers
@@ -31,20 +31,20 @@ target_link_libraries(chyt-client-protos PUBLIC
   contrib-libs-protobuf
 )
 target_proto_messages(chyt-client-protos PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/chyt/client/protos/query_service.proto
+  ${YT_SOURCE_DIR}/yt/chyt/client/protos/query_service.proto
 )
 target_proto_addincls(chyt-client-protos
   ./yt
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_SOURCE_DIR}/contrib/libs/protobuf/src
-  ${CMAKE_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}/contrib/libs/protobuf/src
+  ${YT_SOURCE_DIR}/yt
+  ${YT_BINARY_DIR}
+  ${YT_SOURCE_DIR}
+  ${YT_SOURCE_DIR}/yt
+  ${YT_SOURCE_DIR}/yt
+  ${YT_SOURCE_DIR}/contrib/libs/protobuf/src
+  ${YT_BINARY_DIR}
+  ${YT_SOURCE_DIR}/contrib/libs/protobuf/src
 )
 target_proto_outs(chyt-client-protos
-  --cpp_out=${CMAKE_BINARY_DIR}/yt
-  --cpp_styleguide_out=${CMAKE_BINARY_DIR}/yt
+  --cpp_out=${YT_BINARY_DIR}/yt
+  --cpp_styleguide_out=${YT_BINARY_DIR}/yt
 )

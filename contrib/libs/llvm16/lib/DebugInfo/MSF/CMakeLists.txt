@@ -12,7 +12,7 @@ target_compile_options(lib-DebugInfo-MSF PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(lib-DebugInfo-MSF PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/MSF
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/MSF
 )
 target_link_libraries(lib-DebugInfo-MSF PUBLIC
   contrib-libs-linux-headers
@@ -21,8 +21,8 @@ target_link_libraries(lib-DebugInfo-MSF PUBLIC
   llvm16-lib-Support
 )
 target_sources(lib-DebugInfo-MSF PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/MSF/MSFBuilder.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/MSF/MSFCommon.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/MSF/MSFError.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/MSF/MappedBlockStream.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/MSF/MSFBuilder.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/MSF/MSFCommon.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/MSF/MSFError.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/MSF/MappedBlockStream.cpp
 )

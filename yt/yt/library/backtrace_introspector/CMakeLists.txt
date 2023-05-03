@@ -23,6 +23,6 @@ target_link_libraries(yt-library-backtrace_introspector PUBLIC
   backtrace-cursors-frame_pointer
 )
 target_sources(yt-library-backtrace_introspector PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/backtrace_introspector/introspect.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/backtrace_introspector/introspect_linux.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/backtrace_introspector/introspect.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/backtrace_introspector/introspect_linux.cpp
 )

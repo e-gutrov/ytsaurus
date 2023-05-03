@@ -27,18 +27,18 @@ target_link_libraries(cpp-porto-proto PUBLIC
   contrib-libs-protobuf
 )
 target_proto_messages(cpp-porto-proto PRIVATE
-  ${CMAKE_SOURCE_DIR}/library/cpp/porto/proto/rpc.proto
+  ${YT_SOURCE_DIR}/library/cpp/porto/proto/rpc.proto
 )
 target_proto_addincls(cpp-porto-proto
   ./
-  ${CMAKE_SOURCE_DIR}/
-  ${CMAKE_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}
-  ${CMAKE_SOURCE_DIR}/contrib/libs/protobuf/src
-  ${CMAKE_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}/contrib/libs/protobuf/src
+  ${YT_SOURCE_DIR}/
+  ${YT_BINARY_DIR}
+  ${YT_SOURCE_DIR}
+  ${YT_SOURCE_DIR}/contrib/libs/protobuf/src
+  ${YT_BINARY_DIR}
+  ${YT_SOURCE_DIR}/contrib/libs/protobuf/src
 )
 target_proto_outs(cpp-porto-proto
-  --cpp_out=${CMAKE_BINARY_DIR}/
-  --cpp_styleguide_out=${CMAKE_BINARY_DIR}/
+  --cpp_out=${YT_BINARY_DIR}/
+  --cpp_styleguide_out=${YT_BINARY_DIR}/
 )

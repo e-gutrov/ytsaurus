@@ -15,5 +15,5 @@ target_link_libraries(cpp-threading-cron PUBLIC
   cpp-deprecated-atomic
 )
 target_sources(cpp-threading-cron PRIVATE
-  ${CMAKE_SOURCE_DIR}/library/cpp/threading/cron/cron.cpp
+  ${YT_SOURCE_DIR}/library/cpp/threading/cron/cron.cpp
 )

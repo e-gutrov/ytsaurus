@@ -34,23 +34,23 @@ target_link_libraries(yt-server-http_proxy PUBLIC
   library-cpp-cgiparam
 )
 target_sources(yt-server-http_proxy PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/http_proxy/public.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/http_proxy/bootstrap.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/http_proxy/coordinator.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/http_proxy/context.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/http_proxy/access_checker.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/http_proxy/api.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/http_proxy/dynamic_config_manager.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/http_proxy/http_authenticator.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/http_proxy/formats.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/http_proxy/helpers.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/http_proxy/compression.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/http_proxy/framing.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/http_proxy/config.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/http_proxy/zookeeper_bootstrap_proxy.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/http_proxy/clickhouse/discovery_cache.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/http_proxy/clickhouse/config.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/http_proxy/clickhouse/handler.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/http_proxy/clickhouse/public.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/http_proxy/compression_opensource.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/http_proxy/public.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/http_proxy/bootstrap.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/http_proxy/coordinator.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/http_proxy/context.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/http_proxy/access_checker.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/http_proxy/api.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/http_proxy/dynamic_config_manager.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/http_proxy/http_authenticator.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/http_proxy/formats.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/http_proxy/helpers.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/http_proxy/compression.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/http_proxy/framing.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/http_proxy/config.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/http_proxy/zookeeper_bootstrap_proxy.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/http_proxy/clickhouse/discovery_cache.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/http_proxy/clickhouse/config.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/http_proxy/clickhouse/handler.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/http_proxy/clickhouse/public.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/http_proxy/compression_opensource.cpp
 )

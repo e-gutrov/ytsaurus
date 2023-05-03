@@ -12,7 +12,7 @@ target_compile_options(unittester-scheduler-simulator PRIVATE
   -Wdeprecated-this-capture
 )
 target_include_directories(unittester-scheduler-simulator PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/tools/scheduler_simulator
+  ${YT_SOURCE_DIR}/yt/yt/tools/scheduler_simulator
 )
 target_link_libraries(unittester-scheduler-simulator PUBLIC
   contrib-libs-linux-headers
@@ -36,8 +36,8 @@ target_link_options(unittester-scheduler-simulator PRIVATE
   -lutil
 )
 target_sources(unittester-scheduler-simulator PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/tools/scheduler_simulator/unittests/operation_controller_ut.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/tools/scheduler_simulator/unittests/control_thread_ut.cpp
+  ${YT_SOURCE_DIR}/yt/yt/tools/scheduler_simulator/unittests/operation_controller_ut.cpp
+  ${YT_SOURCE_DIR}/yt/yt/tools/scheduler_simulator/unittests/control_thread_ut.cpp
 )
 add_test(
   NAME

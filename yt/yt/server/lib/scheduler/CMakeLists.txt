@@ -48,7 +48,7 @@ target_compile_options(server-lib-scheduler PRIVATE
   -Wdeprecated-this-capture
 )
 target_include_directories(server-lib-scheduler PUBLIC
-  ${CMAKE_BINARY_DIR}/yt
+  ${YT_BINARY_DIR}/yt
 )
 target_link_libraries(server-lib-scheduler PUBLIC
   contrib-libs-linux-headers
@@ -61,34 +61,34 @@ target_link_libraries(server-lib-scheduler PUBLIC
   contrib-libs-protobuf
 )
 target_proto_messages(server-lib-scheduler PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/scheduler/proto/allocation.proto
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/scheduler/proto/allocation_tracker_service.proto
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/scheduler/proto/controller_agent_tracker_service.proto
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/scheduler/proto/allocation.proto
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/scheduler/proto/allocation_tracker_service.proto
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/scheduler/proto/controller_agent_tracker_service.proto
 )
 target_sources(server-lib-scheduler PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/scheduler/public.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/scheduler/config.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/scheduler/exec_node_descriptor.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/scheduler/experiments.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/scheduler/scheduling_tag.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/scheduler/structs.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/scheduler/event_log.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/scheduler/helpers.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/scheduler/job_metrics.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/scheduler/resource_metering.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/scheduler/public.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/scheduler/config.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/scheduler/exec_node_descriptor.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/scheduler/experiments.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/scheduler/scheduling_tag.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/scheduler/structs.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/scheduler/event_log.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/scheduler/helpers.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/scheduler/job_metrics.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/scheduler/resource_metering.cpp
 )
 target_proto_addincls(server-lib-scheduler
   ./yt
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_SOURCE_DIR}/contrib/libs/protobuf/src
-  ${CMAKE_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}/contrib/libs/protobuf/src
+  ${YT_SOURCE_DIR}/yt
+  ${YT_BINARY_DIR}
+  ${YT_SOURCE_DIR}
+  ${YT_SOURCE_DIR}/yt
+  ${YT_SOURCE_DIR}/yt
+  ${YT_SOURCE_DIR}/contrib/libs/protobuf/src
+  ${YT_BINARY_DIR}
+  ${YT_SOURCE_DIR}/contrib/libs/protobuf/src
 )
 target_proto_outs(server-lib-scheduler
-  --cpp_out=${CMAKE_BINARY_DIR}/yt
-  --cpp_styleguide_out=${CMAKE_BINARY_DIR}/yt
+  --cpp_out=${YT_BINARY_DIR}/yt
+  --cpp_styleguide_out=${YT_BINARY_DIR}/yt
 )

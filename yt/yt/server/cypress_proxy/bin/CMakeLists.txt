@@ -30,7 +30,7 @@ target_link_options(ytserver-cypress-proxy PRIVATE
   -lutil
 )
 target_sources(ytserver-cypress-proxy PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/cypress_proxy/bin/main.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/cypress_proxy/bin/main.cpp
 )
 target_allocator(ytserver-cypress-proxy
   cpp-malloc-tcmalloc

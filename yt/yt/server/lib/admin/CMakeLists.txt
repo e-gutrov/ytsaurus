@@ -19,5 +19,5 @@ target_link_libraries(server-lib-admin PUBLIC
   yt-library-coredumper
 )
 target_sources(server-lib-admin PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/admin/admin_service.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/admin/admin_service.cpp
 )

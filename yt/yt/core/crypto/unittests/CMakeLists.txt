@@ -35,8 +35,8 @@ target_link_options(unittester-core-crypto PRIVATE
   -lutil
 )
 target_sources(unittester-core-crypto PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/crypto/unittests/crypto_ut.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/crypto/unittests/tls_ut.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/crypto/unittests/crypto_ut.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/crypto/unittests/tls_ut.cpp
 )
 add_test(
   NAME

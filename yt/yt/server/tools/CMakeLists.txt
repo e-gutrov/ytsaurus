@@ -21,10 +21,10 @@ target_link_libraries(yt-server-tools PUBLIC
   yt-yt-core
 )
 target_sources(yt-server-tools PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/tools/program.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/tools/proc.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/tools/registry.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/tools/seccomp.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/tools/signaler.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/tools/tools.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/tools/program.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/tools/proc.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/tools/registry.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/tools/seccomp.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/tools/signaler.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/tools/tools.cpp
 )

@@ -48,7 +48,7 @@ target_compile_options(library-query-proto PRIVATE
   -Wdeprecated-this-capture
 )
 target_include_directories(library-query-proto PUBLIC
-  ${CMAKE_BINARY_DIR}/yt
+  ${YT_BINARY_DIR}/yt
 )
 target_link_libraries(library-query-proto PUBLIC
   contrib-libs-linux-headers
@@ -58,22 +58,22 @@ target_link_libraries(library-query-proto PUBLIC
   contrib-libs-protobuf
 )
 target_proto_messages(library-query-proto PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/query/proto/query.proto
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/query/proto/query_service.proto
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/query/proto/functions_cache.proto
+  ${YT_SOURCE_DIR}/yt/yt/library/query/proto/query.proto
+  ${YT_SOURCE_DIR}/yt/yt/library/query/proto/query_service.proto
+  ${YT_SOURCE_DIR}/yt/yt/library/query/proto/functions_cache.proto
 )
 target_proto_addincls(library-query-proto
   ./yt
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_SOURCE_DIR}/contrib/libs/protobuf/src
-  ${CMAKE_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}/contrib/libs/protobuf/src
+  ${YT_SOURCE_DIR}/yt
+  ${YT_BINARY_DIR}
+  ${YT_SOURCE_DIR}
+  ${YT_SOURCE_DIR}/yt
+  ${YT_SOURCE_DIR}/yt
+  ${YT_SOURCE_DIR}/contrib/libs/protobuf/src
+  ${YT_BINARY_DIR}
+  ${YT_SOURCE_DIR}/contrib/libs/protobuf/src
 )
 target_proto_outs(library-query-proto
-  --cpp_out=${CMAKE_BINARY_DIR}/yt
-  --cpp_styleguide_out=${CMAKE_BINARY_DIR}/yt
+  --cpp_out=${YT_BINARY_DIR}/yt
+  --cpp_styleguide_out=${YT_BINARY_DIR}/yt
 )

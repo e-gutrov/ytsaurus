@@ -38,6 +38,6 @@ target_link_options(yson_lib PRIVATE
   -lutil
 )
 use_export_script(yson_lib
-  ${CMAKE_SOURCE_DIR}/yt/yt/python/yson_shared/yson3.exports
+  ${YT_SOURCE_DIR}/yt/yt/python/yson_shared/yson3.exports
 )
 vcs_info(yson_lib)

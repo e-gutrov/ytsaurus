@@ -23,8 +23,8 @@ target_link_libraries(yt-core-test_framework PUBLIC
   library-profiling-solomon
 )
 target_sources(yt-core-test_framework PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/test_framework/fixed_growth_string_output.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/test_framework/mock_http.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/test_framework/fixed_growth_string_output.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/test_framework/mock_http.cpp
 )
 
 add_global_library_for(yt-core-test_framework.global yt-core-test_framework)
@@ -43,5 +43,5 @@ target_link_libraries(yt-core-test_framework.global PUBLIC
   library-profiling-solomon
 )
 target_sources(yt-core-test_framework.global PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/test_framework/framework.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/test_framework/framework.cpp
 )

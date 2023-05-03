@@ -12,7 +12,7 @@ target_compile_options(lib-CodeGen-SelectionDAG PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(lib-CodeGen-SelectionDAG PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG
 )
 target_link_libraries(lib-CodeGen-SelectionDAG PUBLIC
   contrib-libs-linux-headers
@@ -29,29 +29,29 @@ target_link_libraries(lib-CodeGen-SelectionDAG PUBLIC
   lib-Transforms-Utils
 )
 target_sources(lib-CodeGen-SelectionDAG PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/DAGCombiner.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/FastISel.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/FunctionLoweringInfo.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/InstrEmitter.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/LegalizeDAG.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/LegalizeFloatTypes.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/LegalizeIntegerTypes.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/LegalizeTypes.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/LegalizeTypesGeneric.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/LegalizeVectorOps.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/LegalizeVectorTypes.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/ResourcePriorityQueue.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/ScheduleDAGFast.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/ScheduleDAGRRList.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/ScheduleDAGSDNodes.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/ScheduleDAGVLIW.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/SelectionDAG.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/SelectionDAGAddressAnalysis.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/SelectionDAGBuilder.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/SelectionDAGDumper.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/SelectionDAGISel.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/SelectionDAGPrinter.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/SelectionDAGTargetInfo.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/StatepointLowering.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/TargetLowering.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/DAGCombiner.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/FastISel.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/FunctionLoweringInfo.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/InstrEmitter.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/LegalizeDAG.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/LegalizeFloatTypes.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/LegalizeIntegerTypes.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/LegalizeTypes.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/LegalizeTypesGeneric.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/LegalizeVectorOps.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/LegalizeVectorTypes.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/ResourcePriorityQueue.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/ScheduleDAGFast.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/ScheduleDAGRRList.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/ScheduleDAGSDNodes.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/ScheduleDAGVLIW.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/SelectionDAG.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/SelectionDAGAddressAnalysis.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/SelectionDAGBuilder.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/SelectionDAGDumper.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/SelectionDAGISel.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/SelectionDAGPrinter.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/SelectionDAGTargetInfo.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/StatepointLowering.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/CodeGen/SelectionDAG/TargetLowering.cpp
 )

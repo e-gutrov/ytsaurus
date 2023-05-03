@@ -45,25 +45,25 @@ target_link_libraries(rpc-unittests-lib PUBLIC
   contrib-libs-protobuf
 )
 target_proto_messages(rpc-unittests-lib PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/rpc/unittests/lib/my_service.proto
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/rpc/unittests/lib/no_baggage_service.proto
+  ${YT_SOURCE_DIR}/yt/yt/core/rpc/unittests/lib/my_service.proto
+  ${YT_SOURCE_DIR}/yt/yt/core/rpc/unittests/lib/no_baggage_service.proto
 )
 target_sources(rpc-unittests-lib PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/rpc/unittests/lib/common.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/rpc/unittests/lib/my_service.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/rpc/unittests/lib/no_baggage_service.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/rpc/unittests/lib/common.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/rpc/unittests/lib/my_service.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/rpc/unittests/lib/no_baggage_service.cpp
 )
 target_proto_addincls(rpc-unittests-lib
   ./
-  ${CMAKE_SOURCE_DIR}/
-  ${CMAKE_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_SOURCE_DIR}/contrib/libs/protobuf/src
-  ${CMAKE_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}/contrib/libs/protobuf/src
+  ${YT_SOURCE_DIR}/
+  ${YT_BINARY_DIR}
+  ${YT_SOURCE_DIR}
+  ${YT_SOURCE_DIR}/yt
+  ${YT_SOURCE_DIR}/contrib/libs/protobuf/src
+  ${YT_BINARY_DIR}
+  ${YT_SOURCE_DIR}/contrib/libs/protobuf/src
 )
 target_proto_outs(rpc-unittests-lib
-  --cpp_out=${CMAKE_BINARY_DIR}/
-  --cpp_styleguide_out=${CMAKE_BINARY_DIR}/
+  --cpp_out=${YT_BINARY_DIR}/
+  --cpp_styleguide_out=${YT_BINARY_DIR}/
 )

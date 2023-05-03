@@ -28,10 +28,10 @@ target_link_libraries(yt-library-profiling PUBLIC
   cpp-yt-memory
 )
 target_sources(yt-library-profiling PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/profiling/sensor.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/profiling/producer.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/profiling/impl.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/profiling/tag.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/profiling/testing.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/profiling/histogram_snapshot.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/profiling/sensor.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/profiling/producer.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/profiling/impl.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/profiling/tag.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/profiling/testing.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/profiling/histogram_snapshot.cpp
 )

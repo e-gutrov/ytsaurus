@@ -12,12 +12,12 @@ target_compile_options(contrib-libs-hashidsxx PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(contrib-libs-hashidsxx PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/hashidsxx
+  ${YT_SOURCE_DIR}/contrib/libs/hashidsxx
 )
 target_link_libraries(contrib-libs-hashidsxx PUBLIC
   contrib-libs-linux-headers
   contrib-libs-cxxsupp
 )
 target_sources(contrib-libs-hashidsxx PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/hashidsxx/hashids.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/hashidsxx/hashids.cpp
 )

@@ -13,25 +13,25 @@ target_compile_options(restricted-patched-replxx PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(restricted-patched-replxx PUBLIC
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/patched/replxx/include
+  ${YT_SOURCE_DIR}/contrib/restricted/patched/replxx/include
 )
 target_include_directories(restricted-patched-replxx PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/patched/replxx/src
+  ${YT_SOURCE_DIR}/contrib/restricted/patched/replxx/src
 )
 target_link_libraries(restricted-patched-replxx PUBLIC
   contrib-libs-linux-headers
   contrib-libs-cxxsupp
 )
 target_sources(restricted-patched-replxx PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/patched/replxx/src/ConvertUTF.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/patched/replxx/src/conversion.cxx
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/patched/replxx/src/escape.cxx
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/patched/replxx/src/history.cxx
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/patched/replxx/src/prompt.cxx
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/patched/replxx/src/replxx.cxx
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/patched/replxx/src/replxx_impl.cxx
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/patched/replxx/src/terminal.cxx
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/patched/replxx/src/util.cxx
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/patched/replxx/src/wcwidth.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/patched/replxx/src/windows.cxx
+  ${YT_SOURCE_DIR}/contrib/restricted/patched/replxx/src/ConvertUTF.cpp
+  ${YT_SOURCE_DIR}/contrib/restricted/patched/replxx/src/conversion.cxx
+  ${YT_SOURCE_DIR}/contrib/restricted/patched/replxx/src/escape.cxx
+  ${YT_SOURCE_DIR}/contrib/restricted/patched/replxx/src/history.cxx
+  ${YT_SOURCE_DIR}/contrib/restricted/patched/replxx/src/prompt.cxx
+  ${YT_SOURCE_DIR}/contrib/restricted/patched/replxx/src/replxx.cxx
+  ${YT_SOURCE_DIR}/contrib/restricted/patched/replxx/src/replxx_impl.cxx
+  ${YT_SOURCE_DIR}/contrib/restricted/patched/replxx/src/terminal.cxx
+  ${YT_SOURCE_DIR}/contrib/restricted/patched/replxx/src/util.cxx
+  ${YT_SOURCE_DIR}/contrib/restricted/patched/replxx/src/wcwidth.cpp
+  ${YT_SOURCE_DIR}/contrib/restricted/patched/replxx/src/windows.cxx
 )

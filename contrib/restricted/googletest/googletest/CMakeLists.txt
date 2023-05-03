@@ -18,10 +18,10 @@ target_compile_options(restricted-googletest-googletest PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(restricted-googletest-googletest PUBLIC
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/googletest/googletest/include
+  ${YT_SOURCE_DIR}/contrib/restricted/googletest/googletest/include
 )
 target_include_directories(restricted-googletest-googletest PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/googletest/googletest
+  ${YT_SOURCE_DIR}/contrib/restricted/googletest/googletest
 )
 target_link_libraries(restricted-googletest-googletest PUBLIC
   contrib-libs-linux-headers
@@ -29,5 +29,5 @@ target_link_libraries(restricted-googletest-googletest PUBLIC
   contrib-libs-re2
 )
 target_sources(restricted-googletest-googletest PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/googletest/googletest/src/gtest-all.cc
+  ${YT_SOURCE_DIR}/contrib/restricted/googletest/googletest/src/gtest-all.cc
 )

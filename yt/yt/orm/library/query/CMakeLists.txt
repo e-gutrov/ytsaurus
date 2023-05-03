@@ -22,10 +22,10 @@ target_link_libraries(orm-library-query PUBLIC
   yt-yt-client
 )
 target_sources(orm-library-query PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/orm/library/query/expression_evaluator.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/orm/library/query/filter_introspection.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/orm/library/query/filter_matcher.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/orm/library/query/query_evaluator.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/orm/library/query/query_optimizer.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/orm/library/query/query_rewriter.cpp
+  ${YT_SOURCE_DIR}/yt/yt/orm/library/query/expression_evaluator.cpp
+  ${YT_SOURCE_DIR}/yt/yt/orm/library/query/filter_introspection.cpp
+  ${YT_SOURCE_DIR}/yt/yt/orm/library/query/filter_matcher.cpp
+  ${YT_SOURCE_DIR}/yt/yt/orm/library/query/query_evaluator.cpp
+  ${YT_SOURCE_DIR}/yt/yt/orm/library/query/query_optimizer.cpp
+  ${YT_SOURCE_DIR}/yt/yt/orm/library/query/query_rewriter.cpp
 )

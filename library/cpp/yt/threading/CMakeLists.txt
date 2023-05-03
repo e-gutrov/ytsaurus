@@ -21,16 +21,16 @@ target_link_libraries(cpp-yt-threading PUBLIC
   cpp-yt-memory
 )
 target_sources(cpp-yt-threading PRIVATE
-  ${CMAKE_SOURCE_DIR}/library/cpp/yt/threading/at_fork.cpp
-  ${CMAKE_SOURCE_DIR}/library/cpp/yt/threading/event_count.cpp
-  ${CMAKE_SOURCE_DIR}/library/cpp/yt/threading/fork_aware_spin_lock.cpp
-  ${CMAKE_SOURCE_DIR}/library/cpp/yt/threading/fork_aware_rw_spin_lock.cpp
-  ${CMAKE_SOURCE_DIR}/library/cpp/yt/threading/futex.cpp
-  ${CMAKE_SOURCE_DIR}/library/cpp/yt/threading/public.cpp
-  ${CMAKE_SOURCE_DIR}/library/cpp/yt/threading/recursive_spin_lock.cpp
-  ${CMAKE_SOURCE_DIR}/library/cpp/yt/threading/rw_spin_lock.cpp
-  ${CMAKE_SOURCE_DIR}/library/cpp/yt/threading/spin_lock_base.cpp
-  ${CMAKE_SOURCE_DIR}/library/cpp/yt/threading/spin_lock.cpp
-  ${CMAKE_SOURCE_DIR}/library/cpp/yt/threading/spin_wait.cpp
-  ${CMAKE_SOURCE_DIR}/library/cpp/yt/threading/spin_wait_hook.cpp
+  ${YT_SOURCE_DIR}/library/cpp/yt/threading/at_fork.cpp
+  ${YT_SOURCE_DIR}/library/cpp/yt/threading/event_count.cpp
+  ${YT_SOURCE_DIR}/library/cpp/yt/threading/fork_aware_spin_lock.cpp
+  ${YT_SOURCE_DIR}/library/cpp/yt/threading/fork_aware_rw_spin_lock.cpp
+  ${YT_SOURCE_DIR}/library/cpp/yt/threading/futex.cpp
+  ${YT_SOURCE_DIR}/library/cpp/yt/threading/public.cpp
+  ${YT_SOURCE_DIR}/library/cpp/yt/threading/recursive_spin_lock.cpp
+  ${YT_SOURCE_DIR}/library/cpp/yt/threading/rw_spin_lock.cpp
+  ${YT_SOURCE_DIR}/library/cpp/yt/threading/spin_lock_base.cpp
+  ${YT_SOURCE_DIR}/library/cpp/yt/threading/spin_lock.cpp
+  ${YT_SOURCE_DIR}/library/cpp/yt/threading/spin_wait.cpp
+  ${YT_SOURCE_DIR}/library/cpp/yt/threading/spin_wait_hook.cpp
 )

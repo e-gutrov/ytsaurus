@@ -22,12 +22,12 @@ target_link_libraries(yt-library-containers PUBLIC
   library-cpp-porto
 )
 target_sources(yt-library-containers PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/containers/cgroup.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/containers/config.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/containers/instance.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/containers/instance_limits_tracker.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/containers/process.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/containers/porto_executor.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/containers/porto_resource_tracker.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/containers/porto_health_checker.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/containers/cgroup.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/containers/config.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/containers/instance.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/containers/instance_limits_tracker.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/containers/process.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/containers/porto_executor.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/containers/porto_resource_tracker.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/containers/porto_health_checker.cpp
 )

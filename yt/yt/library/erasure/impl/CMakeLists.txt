@@ -20,7 +20,7 @@ target_link_libraries(library-erasure-impl PUBLIC
   library-cpp-erasure
 )
 target_sources(library-erasure-impl PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/erasure/impl/codec.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/erasure/impl/codec_detail.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/erasure/impl/codec_opensource.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/erasure/impl/codec.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/erasure/impl/codec_detail.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/erasure/impl/codec_opensource.cpp
 )

@@ -12,7 +12,7 @@ target_compile_options(llvm16-lib-BinaryFormat PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(llvm16-lib-BinaryFormat PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat
 )
 target_link_libraries(llvm16-lib-BinaryFormat PUBLIC
   contrib-libs-linux-headers
@@ -22,18 +22,18 @@ target_link_libraries(llvm16-lib-BinaryFormat PUBLIC
   llvm16-lib-TargetParser
 )
 target_sources(llvm16-lib-BinaryFormat PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat/AMDGPUMetadataVerifier.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat/COFF.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat/DXContainer.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat/Dwarf.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat/ELF.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat/MachO.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat/Magic.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat/Minidump.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat/MsgPackDocument.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat/MsgPackDocumentYAML.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat/MsgPackReader.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat/MsgPackWriter.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat/Wasm.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat/XCOFF.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat/AMDGPUMetadataVerifier.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat/COFF.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat/DXContainer.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat/Dwarf.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat/ELF.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat/MachO.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat/Magic.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat/Minidump.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat/MsgPackDocument.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat/MsgPackDocumentYAML.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat/MsgPackReader.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat/MsgPackWriter.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat/Wasm.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/BinaryFormat/XCOFF.cpp
 )

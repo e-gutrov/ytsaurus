@@ -21,12 +21,12 @@ target_link_libraries(yt-core-http PUBLIC
   contrib-restricted-http-parser
 )
 target_sources(yt-core-http PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/http/client.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/http/config.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/http/connection_pool.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/http/connection_reuse_helpers.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/http/http.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/http/server.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/http/stream.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/http/helpers.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/http/client.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/http/config.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/http/connection_pool.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/http/connection_reuse_helpers.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/http/http.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/http/server.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/http/stream.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/http/helpers.cpp
 )

@@ -33,41 +33,41 @@ target_link_libraries(server-node-chaos_node PUBLIC
   contrib-libs-protobuf
 )
 target_proto_messages(server-node-chaos_node PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/node/chaos_node/chaos_manager.proto
+  ${YT_SOURCE_DIR}/yt/yt/server/node/chaos_node/chaos_manager.proto
 )
 target_sources(server-node-chaos_node PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/node/chaos_node/automaton.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/node/chaos_node/bootstrap.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/node/chaos_node/chaos_cell_synchronizer.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/node/chaos_node/chaos_manager.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/node/chaos_node/chaos_node_service.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/node/chaos_node/chaos_slot.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/node/chaos_node/coordinator_manager.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/node/chaos_node/coordinator_service.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/node/chaos_node/migrated_replication_card_remover.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/node/chaos_node/replication_card.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/node/chaos_node/replication_card_collocation.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/node/chaos_node/replication_card_observer.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/node/chaos_node/serialize.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/node/chaos_node/shortcut_snapshot_store.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/node/chaos_node/slot_manager.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/node/chaos_node/slot_provider.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/node/chaos_node/transaction.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/node/chaos_node/transaction_manager.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/node/chaos_node/replicated_table_tracker.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/node/chaos_node/replication_card_serialization.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/node/chaos_node/automaton.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/node/chaos_node/bootstrap.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/node/chaos_node/chaos_cell_synchronizer.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/node/chaos_node/chaos_manager.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/node/chaos_node/chaos_node_service.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/node/chaos_node/chaos_slot.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/node/chaos_node/coordinator_manager.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/node/chaos_node/coordinator_service.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/node/chaos_node/migrated_replication_card_remover.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/node/chaos_node/replication_card.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/node/chaos_node/replication_card_collocation.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/node/chaos_node/replication_card_observer.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/node/chaos_node/serialize.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/node/chaos_node/shortcut_snapshot_store.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/node/chaos_node/slot_manager.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/node/chaos_node/slot_provider.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/node/chaos_node/transaction.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/node/chaos_node/transaction_manager.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/node/chaos_node/replicated_table_tracker.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/node/chaos_node/replication_card_serialization.cpp
 )
 target_proto_addincls(server-node-chaos_node
   ./
-  ${CMAKE_SOURCE_DIR}/
-  ${CMAKE_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_SOURCE_DIR}/contrib/libs/protobuf/src
-  ${CMAKE_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}/contrib/libs/protobuf/src
+  ${YT_SOURCE_DIR}/
+  ${YT_BINARY_DIR}
+  ${YT_SOURCE_DIR}
+  ${YT_SOURCE_DIR}/yt
+  ${YT_SOURCE_DIR}/contrib/libs/protobuf/src
+  ${YT_BINARY_DIR}
+  ${YT_SOURCE_DIR}/contrib/libs/protobuf/src
 )
 target_proto_outs(server-node-chaos_node
-  --cpp_out=${CMAKE_BINARY_DIR}/
-  --cpp_styleguide_out=${CMAKE_BINARY_DIR}/
+  --cpp_out=${YT_BINARY_DIR}/
+  --cpp_styleguide_out=${YT_BINARY_DIR}/
 )

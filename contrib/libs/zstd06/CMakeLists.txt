@@ -13,36 +13,36 @@ target_compile_options(contrib-libs-zstd06 PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(contrib-libs-zstd06 PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/zstd06
-  ${CMAKE_SOURCE_DIR}/contrib/libs/zstd06/common
-  ${CMAKE_SOURCE_DIR}/contrib/libs/zstd06/compress
-  ${CMAKE_SOURCE_DIR}/contrib/libs/zstd06/decompress
-  ${CMAKE_SOURCE_DIR}/contrib/libs/zstd06/dictBuilder
-  ${CMAKE_SOURCE_DIR}/contrib/libs/zstd06/legacy
+  ${YT_SOURCE_DIR}/contrib/libs/zstd06
+  ${YT_SOURCE_DIR}/contrib/libs/zstd06/common
+  ${YT_SOURCE_DIR}/contrib/libs/zstd06/compress
+  ${YT_SOURCE_DIR}/contrib/libs/zstd06/decompress
+  ${YT_SOURCE_DIR}/contrib/libs/zstd06/dictBuilder
+  ${YT_SOURCE_DIR}/contrib/libs/zstd06/legacy
 )
 target_link_libraries(contrib-libs-zstd06 PUBLIC
   contrib-libs-linux-headers
   contrib-libs-cxxsupp
 )
 target_sources(contrib-libs-zstd06 PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/zstd06/common/entropy_common.c
-  ${CMAKE_SOURCE_DIR}/contrib/libs/zstd06/common/fse_decompress.c
-  ${CMAKE_SOURCE_DIR}/contrib/libs/zstd06/common/xxhash.c
-  ${CMAKE_SOURCE_DIR}/contrib/libs/zstd06/common/zstd_common.c
-  ${CMAKE_SOURCE_DIR}/contrib/libs/zstd06/compress/fse_compress.c
-  ${CMAKE_SOURCE_DIR}/contrib/libs/zstd06/compress/huf_compress.c
-  ${CMAKE_SOURCE_DIR}/contrib/libs/zstd06/compress/zbuff_compress.c
-  ${CMAKE_SOURCE_DIR}/contrib/libs/zstd06/compress/zstd_compress.c
-  ${CMAKE_SOURCE_DIR}/contrib/libs/zstd06/decompress/huf_decompress.c
-  ${CMAKE_SOURCE_DIR}/contrib/libs/zstd06/decompress/zbuff_decompress.c
-  ${CMAKE_SOURCE_DIR}/contrib/libs/zstd06/decompress/zstd_decompress.c
-  ${CMAKE_SOURCE_DIR}/contrib/libs/zstd06/dictBuilder/divsufsort.c
-  ${CMAKE_SOURCE_DIR}/contrib/libs/zstd06/dictBuilder/zdict.c
-  ${CMAKE_SOURCE_DIR}/contrib/libs/zstd06/legacy/zstd_v01.c
-  ${CMAKE_SOURCE_DIR}/contrib/libs/zstd06/legacy/zstd_v02.c
-  ${CMAKE_SOURCE_DIR}/contrib/libs/zstd06/legacy/zstd_v03.c
-  ${CMAKE_SOURCE_DIR}/contrib/libs/zstd06/legacy/zstd_v04.c
-  ${CMAKE_SOURCE_DIR}/contrib/libs/zstd06/legacy/zstd_v05.c
-  ${CMAKE_SOURCE_DIR}/contrib/libs/zstd06/legacy/zstd_v07.c
-  ${CMAKE_SOURCE_DIR}/contrib/libs/zstd06/legacy/zstd_v08.c
+  ${YT_SOURCE_DIR}/contrib/libs/zstd06/common/entropy_common.c
+  ${YT_SOURCE_DIR}/contrib/libs/zstd06/common/fse_decompress.c
+  ${YT_SOURCE_DIR}/contrib/libs/zstd06/common/xxhash.c
+  ${YT_SOURCE_DIR}/contrib/libs/zstd06/common/zstd_common.c
+  ${YT_SOURCE_DIR}/contrib/libs/zstd06/compress/fse_compress.c
+  ${YT_SOURCE_DIR}/contrib/libs/zstd06/compress/huf_compress.c
+  ${YT_SOURCE_DIR}/contrib/libs/zstd06/compress/zbuff_compress.c
+  ${YT_SOURCE_DIR}/contrib/libs/zstd06/compress/zstd_compress.c
+  ${YT_SOURCE_DIR}/contrib/libs/zstd06/decompress/huf_decompress.c
+  ${YT_SOURCE_DIR}/contrib/libs/zstd06/decompress/zbuff_decompress.c
+  ${YT_SOURCE_DIR}/contrib/libs/zstd06/decompress/zstd_decompress.c
+  ${YT_SOURCE_DIR}/contrib/libs/zstd06/dictBuilder/divsufsort.c
+  ${YT_SOURCE_DIR}/contrib/libs/zstd06/dictBuilder/zdict.c
+  ${YT_SOURCE_DIR}/contrib/libs/zstd06/legacy/zstd_v01.c
+  ${YT_SOURCE_DIR}/contrib/libs/zstd06/legacy/zstd_v02.c
+  ${YT_SOURCE_DIR}/contrib/libs/zstd06/legacy/zstd_v03.c
+  ${YT_SOURCE_DIR}/contrib/libs/zstd06/legacy/zstd_v04.c
+  ${YT_SOURCE_DIR}/contrib/libs/zstd06/legacy/zstd_v05.c
+  ${YT_SOURCE_DIR}/contrib/libs/zstd06/legacy/zstd_v07.c
+  ${YT_SOURCE_DIR}/contrib/libs/zstd06/legacy/zstd_v08.c
 )

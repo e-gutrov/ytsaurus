@@ -19,14 +19,14 @@ target_compile_options(libs-poco-NetSSL_OpenSSL PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(libs-poco-NetSSL_OpenSSL PUBLIC
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/include
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/include
 )
 target_include_directories(libs-poco-NetSSL_OpenSSL PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Crypto/include
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Foundation/include
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Net/include
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Util/include
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Crypto/include
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Foundation/include
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Net/include
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Util/include
 )
 target_link_libraries(libs-poco-NetSSL_OpenSSL PUBLIC
   contrib-libs-linux-headers
@@ -40,31 +40,31 @@ target_link_libraries(libs-poco-NetSSL_OpenSSL PUBLIC
   libs-poco-XML
 )
 target_sources(libs-poco-NetSSL_OpenSSL PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/AcceptCertificateHandler.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/CertificateHandlerFactory.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/CertificateHandlerFactoryMgr.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/ConsoleCertificateHandler.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/Context.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/HTTPSClientSession.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/HTTPSSessionInstantiator.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/HTTPSStreamFactory.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/InvalidCertificateHandler.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/KeyConsoleHandler.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/KeyFileHandler.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/PrivateKeyFactory.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/PrivateKeyFactoryMgr.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/PrivateKeyPassphraseHandler.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/RejectCertificateHandler.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/SSLException.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/SSLManager.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/SecureSMTPClientSession.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/SecureServerSocket.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/SecureServerSocketImpl.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/SecureSocketImpl.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/SecureStreamSocket.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/SecureStreamSocketImpl.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/Session.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/Utility.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/VerificationErrorArgs.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/X509Certificate.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/AcceptCertificateHandler.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/CertificateHandlerFactory.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/CertificateHandlerFactoryMgr.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/ConsoleCertificateHandler.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/Context.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/HTTPSClientSession.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/HTTPSSessionInstantiator.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/HTTPSStreamFactory.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/InvalidCertificateHandler.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/KeyConsoleHandler.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/KeyFileHandler.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/PrivateKeyFactory.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/PrivateKeyFactoryMgr.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/PrivateKeyPassphraseHandler.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/RejectCertificateHandler.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/SSLException.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/SSLManager.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/SecureSMTPClientSession.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/SecureServerSocket.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/SecureServerSocketImpl.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/SecureSocketImpl.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/SecureStreamSocket.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/SecureStreamSocketImpl.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/Session.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/Utility.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/VerificationErrorArgs.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/NetSSL_OpenSSL/src/X509Certificate.cpp
 )

@@ -9,7 +9,7 @@
 
 add_library(restricted-boost-function_types INTERFACE)
 target_include_directories(restricted-boost-function_types INTERFACE
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/boost/function_types/include
+  ${YT_SOURCE_DIR}/contrib/restricted/boost/function_types/include
 )
 target_link_libraries(restricted-boost-function_types INTERFACE
   contrib-libs-linux-headers

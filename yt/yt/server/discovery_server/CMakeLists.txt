@@ -12,7 +12,7 @@ target_compile_options(yt-server-discovery_server PRIVATE
   -Wdeprecated-this-capture
 )
 target_include_directories(yt-server-discovery_server PUBLIC
-  ${CMAKE_BINARY_DIR}/yt
+  ${YT_BINARY_DIR}/yt
 )
 target_link_libraries(yt-server-discovery_server PUBLIC
   contrib-libs-linux-headers
@@ -25,7 +25,7 @@ target_link_libraries(yt-server-discovery_server PUBLIC
   server-lib-discovery_server
 )
 target_sources(yt-server-discovery_server PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/discovery_server/bootstrap.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/discovery_server/config.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/discovery_server/program.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/discovery_server/bootstrap.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/discovery_server/config.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/discovery_server/program.cpp
 )

@@ -25,17 +25,17 @@ target_link_libraries(yt-server-queue_agent PUBLIC
   server-lib-misc
 )
 target_sources(yt-server-queue_agent PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/queue_agent/alert_manager.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/queue_agent/bootstrap.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/queue_agent/config.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/queue_agent/consumer_controller.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/queue_agent/cypress_synchronizer.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/queue_agent/dynamic_config_manager.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/queue_agent/helpers.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/queue_agent/performance_counters.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/queue_agent/profile_manager.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/queue_agent/queue_agent.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/queue_agent/queue_agent_sharding_manager.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/queue_agent/queue_controller.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/queue_agent/snapshot_representation.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/queue_agent/alert_manager.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/queue_agent/bootstrap.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/queue_agent/config.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/queue_agent/consumer_controller.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/queue_agent/cypress_synchronizer.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/queue_agent/dynamic_config_manager.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/queue_agent/helpers.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/queue_agent/performance_counters.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/queue_agent/profile_manager.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/queue_agent/queue_agent.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/queue_agent/queue_agent_sharding_manager.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/queue_agent/queue_controller.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/queue_agent/snapshot_representation.cpp
 )

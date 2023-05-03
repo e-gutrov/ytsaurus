@@ -12,7 +12,7 @@ target_compile_options(lib-DebugInfo-DWARF PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(lib-DebugInfo-DWARF PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF
 )
 target_link_libraries(lib-DebugInfo-DWARF PUBLIC
   contrib-libs-linux-headers
@@ -24,33 +24,33 @@ target_link_libraries(lib-DebugInfo-DWARF PUBLIC
   llvm16-lib-TargetParser
 )
 target_sources(lib-DebugInfo-DWARF PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFAbbreviationDeclaration.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFAcceleratorTable.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFAddressRange.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFCompileUnit.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFContext.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFDataExtractor.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFDebugAbbrev.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFDebugAddr.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFDebugArangeSet.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFDebugAranges.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFDebugFrame.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFDebugInfoEntry.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFDebugLine.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFDebugLoc.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFDebugMacro.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFDebugPubTable.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFDebugRangeList.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFDebugRnglists.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFDie.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFExpression.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFFormValue.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFGdbIndex.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFListTable.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFLocationExpression.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFTypePrinter.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFTypeUnit.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFUnit.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFUnitIndex.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFVerifier.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFAbbreviationDeclaration.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFAcceleratorTable.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFAddressRange.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFCompileUnit.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFContext.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFDataExtractor.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFDebugAbbrev.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFDebugAddr.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFDebugArangeSet.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFDebugAranges.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFDebugFrame.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFDebugInfoEntry.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFDebugLine.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFDebugLoc.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFDebugMacro.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFDebugPubTable.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFDebugRangeList.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFDebugRnglists.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFDie.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFExpression.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFFormValue.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFGdbIndex.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFListTable.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFLocationExpression.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFTypePrinter.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFTypeUnit.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFUnit.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFUnitIndex.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/DebugInfo/DWARF/DWARFVerifier.cpp
 )

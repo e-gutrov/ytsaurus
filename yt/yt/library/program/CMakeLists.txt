@@ -29,11 +29,11 @@ target_link_libraries(yt-library-program PUBLIC
   cpp-yt-string
 )
 target_sources(yt-library-program PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/program/build_attributes.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/program/config.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/program/helpers.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/program/program.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/program/program_config_mixin.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/program/program_pdeathsig_mixin.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/program/program_setsid_mixin.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/program/build_attributes.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/program/config.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/program/helpers.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/program/program.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/program/program_config_mixin.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/program/program_pdeathsig_mixin.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/program/program_setsid_mixin.cpp
 )

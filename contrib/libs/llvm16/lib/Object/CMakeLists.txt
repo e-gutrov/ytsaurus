@@ -12,7 +12,7 @@ target_compile_options(llvm16-lib-Object PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(llvm16-lib-Object PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object
 )
 target_link_libraries(llvm16-lib-Object PUBLIC
   contrib-libs-linux-headers
@@ -30,37 +30,37 @@ target_link_libraries(llvm16-lib-Object PUBLIC
   llvm16-lib-TextAPI
 )
 target_sources(llvm16-lib-Object PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/Archive.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/ArchiveWriter.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/Binary.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/BuildID.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/COFFImportFile.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/COFFModuleDefinition.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/COFFObjectFile.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/DXContainer.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/Decompressor.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/ELF.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/ELFObjectFile.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/Error.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/FaultMapParser.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/IRObjectFile.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/IRSymtab.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/MachOObjectFile.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/MachOUniversal.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/MachOUniversalWriter.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/Minidump.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/ModuleSymbolTable.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/Object.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/ObjectFile.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/OffloadBinary.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/RecordStreamer.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/RelocationResolver.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/SymbolSize.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/SymbolicFile.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/TapiFile.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/TapiUniversal.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/WasmObjectFile.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/WindowsMachineFlag.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/WindowsResource.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/XCOFFObjectFile.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/Archive.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/ArchiveWriter.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/Binary.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/BuildID.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/COFFImportFile.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/COFFModuleDefinition.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/COFFObjectFile.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/DXContainer.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/Decompressor.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/ELF.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/ELFObjectFile.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/Error.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/FaultMapParser.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/IRObjectFile.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/IRSymtab.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/MachOObjectFile.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/MachOUniversal.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/MachOUniversalWriter.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/Minidump.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/ModuleSymbolTable.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/Object.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/ObjectFile.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/OffloadBinary.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/RecordStreamer.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/RelocationResolver.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/SymbolSize.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/SymbolicFile.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/TapiFile.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/TapiUniversal.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/WasmObjectFile.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/WindowsMachineFlag.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/WindowsResource.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Object/XCOFFObjectFile.cpp
 )

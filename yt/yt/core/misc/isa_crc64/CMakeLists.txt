@@ -17,16 +17,16 @@ target_link_libraries(isa-l_crc_yt_patch PUBLIC
   contrib-libs-cxxsupp
 )
 target_sources(isa-l_crc_yt_patch PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/misc/isa_crc64/crc64_yt_norm_refs.c
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/misc/isa_crc64/checksum.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/misc/isa_crc64/crc64_yt_norm_refs.c
+  ${YT_SOURCE_DIR}/yt/yt/core/misc/isa_crc64/checksum.cpp
 )
 target_yasm_source(isa-l_crc_yt_patch
   PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/misc/isa_crc64/crc64_yt_norm_by8.asm
+  ${YT_SOURCE_DIR}/yt/yt/core/misc/isa_crc64/crc64_yt_norm_by8.asm
   -I
-  ${CMAKE_BINARY_DIR}
+  ${YT_BINARY_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}
+  ${YT_SOURCE_DIR}
   -I
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/misc/isa_crc64/include
+  ${YT_SOURCE_DIR}/yt/yt/core/misc/isa_crc64/include
 )

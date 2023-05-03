@@ -20,9 +20,9 @@ target_link_libraries(yt-library-process PUBLIC
   contrib-libs-re2
 )
 target_sources(yt-library-process PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/process/io_dispatcher.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/process/pipe.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/process/process.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/process/pty.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/library/process/subprocess.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/process/io_dispatcher.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/process/pipe.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/process/process.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/process/pty.cpp
+  ${YT_SOURCE_DIR}/yt/yt/library/process/subprocess.cpp
 )

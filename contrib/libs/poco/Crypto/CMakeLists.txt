@@ -19,11 +19,11 @@ target_compile_options(libs-poco-Crypto PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(libs-poco-Crypto PUBLIC
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Crypto/include
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Crypto/include
 )
 target_include_directories(libs-poco-Crypto PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Crypto/src
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Foundation/include
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Crypto/src
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Foundation/include
 )
 target_link_libraries(libs-poco-Crypto PUBLIC
   contrib-libs-linux-headers
@@ -32,26 +32,26 @@ target_link_libraries(libs-poco-Crypto PUBLIC
   libs-poco-Foundation
 )
 target_sources(libs-poco-Crypto PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Crypto/src/Cipher.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Crypto/src/CipherFactory.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Crypto/src/CipherImpl.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Crypto/src/CipherKey.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Crypto/src/CipherKeyImpl.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Crypto/src/CryptoException.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Crypto/src/CryptoStream.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Crypto/src/CryptoTransform.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Crypto/src/DigestEngine.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Crypto/src/ECDSADigestEngine.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Crypto/src/ECKey.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Crypto/src/ECKeyImpl.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Crypto/src/EVPPKey.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Crypto/src/KeyPair.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Crypto/src/KeyPairImpl.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Crypto/src/OpenSSLInitializer.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Crypto/src/PKCS12Container.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Crypto/src/RSACipherImpl.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Crypto/src/RSADigestEngine.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Crypto/src/RSAKey.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Crypto/src/RSAKeyImpl.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Crypto/src/X509Certificate.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Crypto/src/Cipher.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Crypto/src/CipherFactory.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Crypto/src/CipherImpl.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Crypto/src/CipherKey.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Crypto/src/CipherKeyImpl.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Crypto/src/CryptoException.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Crypto/src/CryptoStream.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Crypto/src/CryptoTransform.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Crypto/src/DigestEngine.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Crypto/src/ECDSADigestEngine.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Crypto/src/ECKey.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Crypto/src/ECKeyImpl.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Crypto/src/EVPPKey.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Crypto/src/KeyPair.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Crypto/src/KeyPairImpl.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Crypto/src/OpenSSLInitializer.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Crypto/src/PKCS12Container.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Crypto/src/RSACipherImpl.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Crypto/src/RSADigestEngine.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Crypto/src/RSAKey.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Crypto/src/RSAKeyImpl.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Crypto/src/X509Certificate.cpp
 )

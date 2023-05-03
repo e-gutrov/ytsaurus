@@ -36,7 +36,7 @@ target_compile_options(server-lib-hydra PRIVATE
   -Wdeprecated-this-capture
 )
 target_include_directories(server-lib-hydra PUBLIC
-  ${CMAKE_BINARY_DIR}/yt
+  ${YT_BINARY_DIR}/yt
 )
 target_link_libraries(server-lib-hydra PUBLIC
   contrib-libs-linux-headers
@@ -51,34 +51,34 @@ target_link_libraries(server-lib-hydra PUBLIC
   contrib-libs-protobuf
 )
 target_proto_messages(server-lib-hydra PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/hydra/proto/hydra_service.proto
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/hydra/proto/snapshot_service.proto
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/hydra/proto/hydra_service.proto
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/hydra/proto/snapshot_service.proto
 )
 target_sources(server-lib-hydra PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/hydra/changelog_discovery.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/hydra/changelog_download.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/hydra/checkpointer.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/hydra/decorated_automaton.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/hydra/distributed_hydra_manager.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/hydra/lease_tracker.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/hydra/local_snapshot_service.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/hydra/mutation_committer.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/hydra/recovery.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/hydra/snapshot_discovery.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/hydra/snapshot_download.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/hydra/changelog_discovery.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/hydra/changelog_download.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/hydra/checkpointer.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/hydra/decorated_automaton.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/hydra/distributed_hydra_manager.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/hydra/lease_tracker.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/hydra/local_snapshot_service.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/hydra/mutation_committer.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/hydra/recovery.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/hydra/snapshot_discovery.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/hydra/snapshot_download.cpp
 )
 target_proto_addincls(server-lib-hydra
   ./yt
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_SOURCE_DIR}/contrib/libs/protobuf/src
-  ${CMAKE_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}/contrib/libs/protobuf/src
+  ${YT_SOURCE_DIR}/yt
+  ${YT_BINARY_DIR}
+  ${YT_SOURCE_DIR}
+  ${YT_SOURCE_DIR}/yt
+  ${YT_SOURCE_DIR}/yt
+  ${YT_SOURCE_DIR}/contrib/libs/protobuf/src
+  ${YT_BINARY_DIR}
+  ${YT_SOURCE_DIR}/contrib/libs/protobuf/src
 )
 target_proto_outs(server-lib-hydra
-  --cpp_out=${CMAKE_BINARY_DIR}/yt
-  --cpp_styleguide_out=${CMAKE_BINARY_DIR}/yt
+  --cpp_out=${YT_BINARY_DIR}/yt
+  --cpp_styleguide_out=${YT_BINARY_DIR}/yt
 )

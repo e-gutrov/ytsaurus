@@ -18,5 +18,5 @@ target_link_libraries(backtrace-cursors-libunwind PUBLIC
   contrib-libs-libunwind
 )
 target_sources(backtrace-cursors-libunwind PRIVATE
-  ${CMAKE_SOURCE_DIR}/library/cpp/yt/backtrace/cursors/libunwind/libunwind_cursor.cpp
+  ${YT_SOURCE_DIR}/library/cpp/yt/backtrace/cursors/libunwind/libunwind_cursor.cpp
 )

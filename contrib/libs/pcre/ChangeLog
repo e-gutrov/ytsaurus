@@ -2830,7 +2830,7 @@ Version 7.9 11-Apr-09
     problem, but was untidy.
 
 23. Steven Van Ingelgem's patch to CMakeLists.txt to change the name
-    CMAKE_BINARY_DIR to PROJECT_BINARY_DIR so that it works when PCRE is
+    YT_BINARY_DIR to PROJECT_BINARY_DIR so that it works when PCRE is
     included within another project.
 
 24. Steven Van Ingelgem's patches to add more options to the CMake support,

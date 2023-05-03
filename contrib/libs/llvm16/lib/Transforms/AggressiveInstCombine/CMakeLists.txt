@@ -12,7 +12,7 @@ target_compile_options(lib-Transforms-AggressiveInstCombine PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(lib-Transforms-AggressiveInstCombine PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/AggressiveInstCombine
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/AggressiveInstCombine
 )
 target_link_libraries(lib-Transforms-AggressiveInstCombine PUBLIC
   contrib-libs-linux-headers
@@ -25,6 +25,6 @@ target_link_libraries(lib-Transforms-AggressiveInstCombine PUBLIC
   lib-Transforms-Utils
 )
 target_sources(lib-Transforms-AggressiveInstCombine PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/AggressiveInstCombine/AggressiveInstCombine.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/AggressiveInstCombine/TruncInstCombine.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/AggressiveInstCombine/AggressiveInstCombine.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Transforms/AggressiveInstCombine/TruncInstCombine.cpp
 )

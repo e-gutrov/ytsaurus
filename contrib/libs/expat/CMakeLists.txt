@@ -13,14 +13,14 @@ target_compile_options(contrib-libs-expat PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(contrib-libs-expat PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/expat
-  ${CMAKE_SOURCE_DIR}/contrib/libs/expat/lib
+  ${YT_SOURCE_DIR}/contrib/libs/expat
+  ${YT_SOURCE_DIR}/contrib/libs/expat/lib
 )
 target_link_libraries(contrib-libs-expat PUBLIC
   contrib-libs-linux-headers
 )
 target_sources(contrib-libs-expat PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/expat/lib/xmlparse.c
-  ${CMAKE_SOURCE_DIR}/contrib/libs/expat/lib/xmlrole.c
-  ${CMAKE_SOURCE_DIR}/contrib/libs/expat/lib/xmltok.c
+  ${YT_SOURCE_DIR}/contrib/libs/expat/lib/xmlparse.c
+  ${YT_SOURCE_DIR}/contrib/libs/expat/lib/xmlrole.c
+  ${YT_SOURCE_DIR}/contrib/libs/expat/lib/xmltok.c
 )

@@ -12,7 +12,7 @@ target_compile_options(lib-Frontend-OpenMP PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(lib-Frontend-OpenMP PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Frontend/OpenMP
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Frontend/OpenMP
 )
 target_link_libraries(lib-Frontend-OpenMP PUBLIC
   contrib-libs-linux-headers
@@ -28,7 +28,7 @@ target_link_libraries(lib-Frontend-OpenMP PUBLIC
   lib-Transforms-Utils
 )
 target_sources(lib-Frontend-OpenMP PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Frontend/OpenMP/OMP.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Frontend/OpenMP/OMPContext.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/Frontend/OpenMP/OMPIRBuilder.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Frontend/OpenMP/OMP.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Frontend/OpenMP/OMPContext.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/Frontend/OpenMP/OMPIRBuilder.cpp
 )

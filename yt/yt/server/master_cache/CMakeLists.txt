@@ -12,7 +12,7 @@ target_compile_options(yt-server-master_cache PRIVATE
   -Wdeprecated-this-capture
 )
 target_include_directories(yt-server-master_cache PUBLIC
-  ${CMAKE_BINARY_DIR}/yt
+  ${YT_BINARY_DIR}/yt
 )
 target_link_libraries(yt-server-master_cache PUBLIC
   contrib-libs-linux-headers
@@ -27,12 +27,12 @@ target_link_libraries(yt-server-master_cache PUBLIC
   server-lib-cypress_registrar
 )
 target_sources(yt-server-master_cache PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/master_cache/bootstrap.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/master_cache/chaos_cache.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/master_cache/chaos_cache_bootstrap.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/master_cache/chaos_cache_service.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/master_cache/config.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/master_cache/dynamic_config_manager.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/master_cache/master_cache_bootstrap.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/master_cache/program.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/master_cache/bootstrap.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/master_cache/chaos_cache.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/master_cache/chaos_cache_bootstrap.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/master_cache/chaos_cache_service.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/master_cache/config.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/master_cache/dynamic_config_manager.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/master_cache/master_cache_bootstrap.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/master_cache/program.cpp
 )

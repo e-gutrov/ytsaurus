@@ -18,5 +18,5 @@ target_link_libraries(lib-hydra_common-mock PUBLIC
   server-lib-hydra
 )
 target_sources(lib-hydra_common-mock PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/hydra_common/mock/simple_hydra_manager_mock.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/hydra_common/mock/simple_hydra_manager_mock.cpp
 )

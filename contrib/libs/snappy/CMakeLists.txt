@@ -13,7 +13,7 @@ target_compile_options(contrib-libs-snappy PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(contrib-libs-snappy PUBLIC
-  ${CMAKE_SOURCE_DIR}/contrib/libs/snappy/include
+  ${YT_SOURCE_DIR}/contrib/libs/snappy/include
 )
 target_link_libraries(contrib-libs-snappy PUBLIC
   contrib-libs-linux-headers
@@ -21,8 +21,8 @@ target_link_libraries(contrib-libs-snappy PUBLIC
   yutil
 )
 target_sources(contrib-libs-snappy PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/snappy/snappy-c.cc
-  ${CMAKE_SOURCE_DIR}/contrib/libs/snappy/snappy-sinksource.cc
-  ${CMAKE_SOURCE_DIR}/contrib/libs/snappy/snappy-stubs-internal.cc
-  ${CMAKE_SOURCE_DIR}/contrib/libs/snappy/snappy.cc
+  ${YT_SOURCE_DIR}/contrib/libs/snappy/snappy-c.cc
+  ${YT_SOURCE_DIR}/contrib/libs/snappy/snappy-sinksource.cc
+  ${YT_SOURCE_DIR}/contrib/libs/snappy/snappy-stubs-internal.cc
+  ${YT_SOURCE_DIR}/contrib/libs/snappy/snappy.cc
 )

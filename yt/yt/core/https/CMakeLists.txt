@@ -22,7 +22,7 @@ target_link_libraries(yt-core-https PUBLIC
   cpp-http-io
 )
 target_sources(yt-core-https PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/https/config.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/https/client.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/https/server.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/https/config.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/https/client.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/https/server.cpp
 )

@@ -9,7 +9,7 @@
 
 add_library(restricted-boost-proto INTERFACE)
 target_include_directories(restricted-boost-proto INTERFACE
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/boost/proto/include
+  ${YT_SOURCE_DIR}/contrib/restricted/boost/proto/include
 )
 target_link_libraries(restricted-boost-proto INTERFACE
   contrib-libs-linux-headers

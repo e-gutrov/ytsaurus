@@ -18,12 +18,12 @@ target_compile_options(libs-poco-Redis PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(libs-poco-Redis PUBLIC
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Redis/include
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Redis/include
 )
 target_include_directories(libs-poco-Redis PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Foundation/include
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Net/include
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Redis/src
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Foundation/include
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Net/include
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Redis/src
 )
 target_link_libraries(libs-poco-Redis PUBLIC
   contrib-libs-linux-headers
@@ -32,13 +32,13 @@ target_link_libraries(libs-poco-Redis PUBLIC
   libs-poco-Net
 )
 target_sources(libs-poco-Redis PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Redis/src/Array.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Redis/src/AsyncReader.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Redis/src/Client.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Redis/src/Command.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Redis/src/Error.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Redis/src/Exception.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Redis/src/RedisEventArgs.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Redis/src/RedisStream.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/poco/Redis/src/Type.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Redis/src/Array.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Redis/src/AsyncReader.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Redis/src/Client.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Redis/src/Command.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Redis/src/Error.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Redis/src/Exception.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Redis/src/RedisEventArgs.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Redis/src/RedisStream.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/poco/Redis/src/Type.cpp
 )

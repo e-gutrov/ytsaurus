@@ -12,7 +12,7 @@ target_compile_options(abseil-cpp-absl-log PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(abseil-cpp-absl-log PUBLIC
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/abseil-cpp
+  ${YT_SOURCE_DIR}/contrib/restricted/abseil-cpp
 )
 target_link_libraries(abseil-cpp-absl-log PUBLIC
   contrib-libs-linux-headers
@@ -30,18 +30,18 @@ target_link_libraries(abseil-cpp-absl-log PUBLIC
   abseil-cpp-absl-types
 )
 target_sources(abseil-cpp-absl-log PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/abseil-cpp/absl/log/die_if_null.cc
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/abseil-cpp/absl/log/flags.cc
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/abseil-cpp/absl/log/globals.cc
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/abseil-cpp/absl/log/initialize.cc
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/abseil-cpp/absl/log/internal/check_op.cc
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/abseil-cpp/absl/log/internal/conditions.cc
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/abseil-cpp/absl/log/internal/globals.cc
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/abseil-cpp/absl/log/internal/log_format.cc
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/abseil-cpp/absl/log/internal/log_message.cc
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/abseil-cpp/absl/log/internal/log_sink_set.cc
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/abseil-cpp/absl/log/internal/nullguard.cc
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/abseil-cpp/absl/log/internal/proto.cc
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/abseil-cpp/absl/log/log_entry.cc
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/abseil-cpp/absl/log/log_sink.cc
+  ${YT_SOURCE_DIR}/contrib/restricted/abseil-cpp/absl/log/die_if_null.cc
+  ${YT_SOURCE_DIR}/contrib/restricted/abseil-cpp/absl/log/flags.cc
+  ${YT_SOURCE_DIR}/contrib/restricted/abseil-cpp/absl/log/globals.cc
+  ${YT_SOURCE_DIR}/contrib/restricted/abseil-cpp/absl/log/initialize.cc
+  ${YT_SOURCE_DIR}/contrib/restricted/abseil-cpp/absl/log/internal/check_op.cc
+  ${YT_SOURCE_DIR}/contrib/restricted/abseil-cpp/absl/log/internal/conditions.cc
+  ${YT_SOURCE_DIR}/contrib/restricted/abseil-cpp/absl/log/internal/globals.cc
+  ${YT_SOURCE_DIR}/contrib/restricted/abseil-cpp/absl/log/internal/log_format.cc
+  ${YT_SOURCE_DIR}/contrib/restricted/abseil-cpp/absl/log/internal/log_message.cc
+  ${YT_SOURCE_DIR}/contrib/restricted/abseil-cpp/absl/log/internal/log_sink_set.cc
+  ${YT_SOURCE_DIR}/contrib/restricted/abseil-cpp/absl/log/internal/nullguard.cc
+  ${YT_SOURCE_DIR}/contrib/restricted/abseil-cpp/absl/log/internal/proto.cc
+  ${YT_SOURCE_DIR}/contrib/restricted/abseil-cpp/absl/log/log_entry.cc
+  ${YT_SOURCE_DIR}/contrib/restricted/abseil-cpp/absl/log/log_sink.cc
 )

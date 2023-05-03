@@ -9,7 +9,7 @@
 
 add_library(contrib-restricted-magic_enum INTERFACE)
 target_include_directories(contrib-restricted-magic_enum INTERFACE
-  ${CMAKE_SOURCE_DIR}/contrib/restricted/magic_enum/include
+  ${YT_SOURCE_DIR}/contrib/restricted/magic_enum/include
 )
 target_link_libraries(contrib-restricted-magic_enum INTERFACE
   contrib-libs-linux-headers

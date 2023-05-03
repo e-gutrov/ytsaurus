@@ -12,7 +12,7 @@ target_compile_options(llvm16-lib-AsmParser PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(llvm16-lib-AsmParser PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/AsmParser
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/AsmParser
 )
 target_link_libraries(llvm16-lib-AsmParser PUBLIC
   contrib-libs-linux-headers
@@ -24,7 +24,7 @@ target_link_libraries(llvm16-lib-AsmParser PUBLIC
   llvm16-lib-Support
 )
 target_sources(llvm16-lib-AsmParser PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/AsmParser/LLLexer.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/AsmParser/LLParser.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/AsmParser/Parser.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/AsmParser/LLLexer.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/AsmParser/LLParser.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/AsmParser/Parser.cpp
 )

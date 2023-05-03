@@ -21,28 +21,28 @@ target_link_libraries(server-lib-chunk_pools PUBLIC
   server-lib-controller_agent
 )
 target_sources(server-lib-chunk_pools PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/chunk_pool.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/config.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/helpers.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/input_stream.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/input_chunk_mapping.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/legacy_job_manager.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/job_size_adjuster.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/job_size_tracker.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/legacy_sorted_chunk_pool.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/legacy_sorted_job_builder.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/multi_chunk_pool.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/new_sorted_chunk_pool.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/new_sorted_job_builder.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/new_job_manager.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/ordered_chunk_pool.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/resource.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/shuffle_chunk_pool.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/sorted_chunk_pool.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/sorted_job_builder.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/sorted_staging_area.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/unordered_chunk_pool.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/vanilla_chunk_pool.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/chunk_pool.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/config.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/helpers.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/input_stream.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/input_chunk_mapping.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/legacy_job_manager.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/job_size_adjuster.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/job_size_tracker.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/legacy_sorted_chunk_pool.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/legacy_sorted_job_builder.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/multi_chunk_pool.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/new_sorted_chunk_pool.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/new_sorted_job_builder.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/new_job_manager.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/ordered_chunk_pool.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/resource.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/shuffle_chunk_pool.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/sorted_chunk_pool.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/sorted_job_builder.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/sorted_staging_area.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/unordered_chunk_pool.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/vanilla_chunk_pool.cpp
 )
 
 add_global_library_for(server-lib-chunk_pools.global server-lib-chunk_pools)
@@ -57,5 +57,5 @@ target_link_libraries(server-lib-chunk_pools.global PUBLIC
   server-lib-controller_agent
 )
 target_sources(server-lib-chunk_pools.global PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/chunk_pool_factory.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/chunk_pools/chunk_pool_factory.cpp
 )

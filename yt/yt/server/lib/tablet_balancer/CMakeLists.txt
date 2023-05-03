@@ -21,11 +21,11 @@ target_link_libraries(server-lib-tablet_balancer PUBLIC
   orm-library-query
 )
 target_sources(server-lib-tablet_balancer PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/tablet_balancer/balancing_helpers.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/tablet_balancer/config.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/tablet_balancer/parameterized_balancing_helpers.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/tablet_balancer/table.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/tablet_balancer/tablet.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/tablet_balancer/tablet_cell.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/lib/tablet_balancer/tablet_cell_bundle.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/tablet_balancer/balancing_helpers.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/tablet_balancer/config.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/tablet_balancer/parameterized_balancing_helpers.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/tablet_balancer/table.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/tablet_balancer/tablet.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/tablet_balancer/tablet_cell.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/lib/tablet_balancer/tablet_cell_bundle.cpp
 )

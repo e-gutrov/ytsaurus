@@ -25,11 +25,11 @@ target_link_libraries(yt-server-cypress_proxy PUBLIC
   server-lib-cypress_registrar
 )
 target_sources(yt-server-cypress_proxy PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/cypress_proxy/bootstrap.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/cypress_proxy/config.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/cypress_proxy/dynamic_config_manager.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/cypress_proxy/object_service.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/cypress_proxy/path_resolver.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/cypress_proxy/program.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/server/cypress_proxy/sequoia_service.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/cypress_proxy/bootstrap.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/cypress_proxy/config.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/cypress_proxy/dynamic_config_manager.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/cypress_proxy/object_service.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/cypress_proxy/path_resolver.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/cypress_proxy/program.cpp
+  ${YT_SOURCE_DIR}/yt/yt/server/cypress_proxy/sequoia_service.cpp
 )

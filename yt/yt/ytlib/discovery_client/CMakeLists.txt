@@ -24,7 +24,7 @@ target_compile_options(yt-ytlib-discovery_client PRIVATE
   -Wdeprecated-this-capture
 )
 target_include_directories(yt-ytlib-discovery_client PUBLIC
-  ${CMAKE_BINARY_DIR}/yt
+  ${YT_BINARY_DIR}/yt
 )
 target_link_libraries(yt-ytlib-discovery_client PUBLIC
   contrib-libs-linux-headers
@@ -35,28 +35,28 @@ target_link_libraries(yt-ytlib-discovery_client PUBLIC
   yt-yt-client
 )
 target_proto_messages(yt-ytlib-discovery_client PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/ytlib/discovery_client/proto/discovery_client_service.proto
+  ${YT_SOURCE_DIR}/yt/yt/ytlib/discovery_client/proto/discovery_client_service.proto
 )
 target_sources(yt-ytlib-discovery_client PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/ytlib/discovery_client/config.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/ytlib/discovery_client/discovery_client.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/ytlib/discovery_client/helpers.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/ytlib/discovery_client/member_client.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/ytlib/discovery_client/public.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/ytlib/discovery_client/request_session.cpp
+  ${YT_SOURCE_DIR}/yt/yt/ytlib/discovery_client/config.cpp
+  ${YT_SOURCE_DIR}/yt/yt/ytlib/discovery_client/discovery_client.cpp
+  ${YT_SOURCE_DIR}/yt/yt/ytlib/discovery_client/helpers.cpp
+  ${YT_SOURCE_DIR}/yt/yt/ytlib/discovery_client/member_client.cpp
+  ${YT_SOURCE_DIR}/yt/yt/ytlib/discovery_client/public.cpp
+  ${YT_SOURCE_DIR}/yt/yt/ytlib/discovery_client/request_session.cpp
 )
 target_proto_addincls(yt-ytlib-discovery_client
   ./yt
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_SOURCE_DIR}/contrib/libs/protobuf/src
-  ${CMAKE_SOURCE_DIR}/yt
-  ${CMAKE_BINARY_DIR}
-  ${CMAKE_SOURCE_DIR}/contrib/libs/protobuf/src
+  ${YT_SOURCE_DIR}/yt
+  ${YT_BINARY_DIR}
+  ${YT_SOURCE_DIR}
+  ${YT_SOURCE_DIR}/yt
+  ${YT_SOURCE_DIR}/contrib/libs/protobuf/src
+  ${YT_SOURCE_DIR}/yt
+  ${YT_BINARY_DIR}
+  ${YT_SOURCE_DIR}/contrib/libs/protobuf/src
 )
 target_proto_outs(yt-ytlib-discovery_client
-  --cpp_out=${CMAKE_BINARY_DIR}/yt
-  --cpp_styleguide_out=${CMAKE_BINARY_DIR}/yt
+  --cpp_out=${YT_BINARY_DIR}/yt
+  --cpp_styleguide_out=${YT_BINARY_DIR}/yt
 )

@@ -12,7 +12,7 @@ target_compile_options(lib-MC-MCParser PRIVATE
   $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
 )
 target_include_directories(lib-MC-MCParser PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser
 )
 target_link_libraries(lib-MC-MCParser PUBLIC
   contrib-libs-linux-headers
@@ -23,18 +23,18 @@ target_link_libraries(lib-MC-MCParser PUBLIC
   llvm16-lib-TargetParser
 )
 target_sources(lib-MC-MCParser PRIVATE
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser/AsmLexer.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser/AsmParser.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser/COFFAsmParser.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser/COFFMasmParser.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser/DarwinAsmParser.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser/ELFAsmParser.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser/GOFFAsmParser.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser/MCAsmLexer.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser/MCAsmParser.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser/MCAsmParserExtension.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser/MCTargetAsmParser.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser/MasmParser.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser/WasmAsmParser.cpp
-  ${CMAKE_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser/XCOFFAsmParser.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser/AsmLexer.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser/AsmParser.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser/COFFAsmParser.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser/COFFMasmParser.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser/DarwinAsmParser.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser/ELFAsmParser.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser/GOFFAsmParser.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser/MCAsmLexer.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser/MCAsmParser.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser/MCAsmParserExtension.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser/MCTargetAsmParser.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser/MasmParser.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser/WasmAsmParser.cpp
+  ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/MC/MCParser/XCOFFAsmParser.cpp
 )

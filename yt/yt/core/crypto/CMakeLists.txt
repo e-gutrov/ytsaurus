@@ -22,7 +22,7 @@ target_link_libraries(yt-core-crypto PUBLIC
   cpp-openssl-io
 )
 target_sources(yt-core-crypto PRIVATE
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/crypto/config.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/crypto/crypto.cpp
-  ${CMAKE_SOURCE_DIR}/yt/yt/core/crypto/tls.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/crypto/config.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/crypto/crypto.cpp
+  ${YT_SOURCE_DIR}/yt/yt/core/crypto/tls.cpp
 )
