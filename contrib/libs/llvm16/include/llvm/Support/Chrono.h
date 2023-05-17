@@ -51,7 +51,7 @@ inline std::time_t toTimeT(TimePoint<> TP) {
 inline TimePoint<std::chrono::seconds>
 toTimePoint(std::time_t T) {
   using namespace std::chrono;
-  return time_point_cast<seconds>(system_clock::from_time_t(T));
+  return time_point_cast<std::chrono::seconds>(system_clock::from_time_t(T));
 }
 
 /// Convert a std::time_t + nanoseconds to a TimePoint

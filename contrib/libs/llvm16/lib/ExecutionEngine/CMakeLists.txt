@@ -9,6 +9,7 @@
 add_subdirectory(MCJIT)
 add_subdirectory(Orc)
 add_subdirectory(RuntimeDyld)
+add_subdirectory(JITLink)
 
 add_library(llvm16-lib-ExecutionEngine)
 target_compile_options(llvm16-lib-ExecutionEngine PRIVATE
@@ -23,6 +24,7 @@ target_link_libraries(llvm16-lib-ExecutionEngine PUBLIC
   contrib-libs-llvm16
   libs-llvm16-include
   ExecutionEngine-Orc-TargetProcess
+  ExecutionEngine-Orc
   lib-ExecutionEngine-RuntimeDyld
   llvm16-lib-IR
   llvm16-lib-MC

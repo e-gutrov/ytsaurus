@@ -8,3 +8,61 @@
 
 add_subdirectory(Shared)
 add_subdirectory(TargetProcess)
+
+add_library(ExecutionEngine-Orc)
+target_compile_options(ExecutionEngine-Orc PRIVATE
+    $<IF:$<CXX_COMPILER_ID:MSVC>,,-Wno-everything>
+)
+target_include_directories(ExecutionEngine-Orc PRIVATE
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc
+)
+target_link_libraries(ExecutionEngine-Orc PUBLIC
+    contrib-libs-linux-headers
+    contrib-libs-cxxsupp
+    contrib-libs-llvm16
+    llvm16-lib-Support
+    ExecutionEngine-Jitlink
+)
+target_sources(ExecutionEngine-Orc PRIVATE
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/COFFPlatform.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/COFFVCRuntimeSupport.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/CompileOnDemandLayer.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/CompileUtils.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/Core.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/DebuggerSupportPlugin.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/DebugObjectManagerPlugin.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/DebugUtils.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/ELFNixPlatform.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/EPCDebugObjectRegistrar.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/EPCDynamicLibrarySearchGenerator.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/EPCEHFrameRegistrar.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/EPCGenericDylibManager.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/EPCGenericJITLinkMemoryManager.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/EPCGenericRTDyldMemoryManager.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/EPCIndirectionUtils.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/ExecutionUtils.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/ExecutorProcessControl.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/IndirectionUtils.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/IRCompileLayer.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/IRTransformLayer.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/JITTargetMachineBuilder.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/Layer.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/LazyReexports.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/LLJIT.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/LookupAndRecordAddrs.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/MachOPlatform.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/Mangling.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/MapperJITLinkMemoryManager.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/MemoryMapper.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/ObjectFileInterface.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/ObjectLinkingLayer.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/ObjectTransformLayer.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/OrcABISupport.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/OrcV2CBindings.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/RTDyldObjectLinkingLayer.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/SimpleRemoteEPC.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/SpeculateAnalyses.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/Speculation.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/TaskDispatch.cpp
+    ${YT_SOURCE_DIR}/contrib/libs/llvm16/lib/ExecutionEngine/Orc/ThreadSafeModule.cpp
+)
